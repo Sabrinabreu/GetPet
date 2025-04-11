@@ -1,13 +1,28 @@
 const bolinhas = document.querySelectorAll('.bolinha');
+const dropdown = document.getElementById('dropdown');
+const dropdownContent = document.getElementById('dropdown-content');
 
-// Adiciona um evento de clique para cada bolinha
-bolinhas.forEach(bolinha => {
-    bolinha.addEventListener('click', function() {
-        if (this.classList.contains('active')) {
-            this.classList.remove('active');
-        } else {
-            bolinhas.forEach(b => b.classList.remove('active'));
-            this.classList.add('active');
-        }
-    });
+const textos = [
+  "Conteúdo da categoria 1",
+  "Conteúdo da categoria 2",
+  "Conteúdo da categoria 3",
+  "Conteúdo da categoria 4",
+  "Conteúdo da categoria 5"
+];
+
+bolinhas.forEach((bolinha, index) => {
+  bolinha.addEventListener('click', () => {
+    const isActive = bolinha.classList.contains('active');
+
+    bolinhas.forEach(b => b.classList.remove('active'));
+
+    if (isActive) {
+      dropdown.style.display = 'none';
+    } else {
+      bolinha.classList.add('active');
+      dropdown.style.display = 'block';
+      dropdownContent.textContent = textos[index];
+      dropdown.style.backgroundColor = bolinha.style.backgroundColor;
+    }
+  });
 });

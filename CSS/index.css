@@ -4,6 +4,7 @@
 body {
     font-family: "Mukta Vaani", sans-serif;
     background-color: #FAF8EB;
+    margin-top: 90px;
 }
 
 .BotoesHome {
@@ -11,6 +12,7 @@ body {
     flex-direction: row;
     justify-content: center; 
     gap: 20px;
+    margin: 20px 0; 
 }
 .BotoesHome button{
     background-color: #D4D955 !important;
@@ -19,7 +21,6 @@ body {
     width: 250px;
     height: 50px;
     font-size: 17px;
-    margin: 10px 0; 
     cursor: pointer;
     transition: background-color 0.3s;
 }
@@ -34,7 +35,7 @@ body {
     margin: 0 auto;
     display: flex; 
     justify-content: center;
-    overflow: hidden; 
+    overflow: visible;
     position: relative;
 }
 
@@ -59,6 +60,9 @@ body {
             color: white;
             font-size: 30px;
         }
+        .BannerDog {
+            margin-top: 20px;
+        }
 
 .Titulo {
     font-family: "Rammetto One", sans-serif;
@@ -70,35 +74,46 @@ body {
     justify-content: center;
     gap: 180px;
     margin-top: 30px;
-}
-
-.bolinha {
+    position: relative;
+  }
+  
+  .bolinha {
     width: 100px; 
     height: 100px;
     border-radius: 100%;
     cursor: pointer;
     position: relative;
     transition: ease-in-out all 0.3s;
-}
-        .bolinha.active {
-            height: 200px; 
-        }
-
-        .categ-dropdown {
-            background-color: inherit; 
-            width: 1200px;
+  }
+  
+  .categ-dropdown {
+    width: 90vw;
+    margin: 30px auto;
+    padding: 30px 0;
+    border-radius: 8px;
+    color: white;
+    font-size: 16px;
+    position: relative;
+    display: none;
+    z-index: 1;
+    transition: all 0.3s ease;
+  }
+        /* quadrado q conecta a bolinha com o bloco */
+        .categ-dropdown::before {
+            content: "";
             position: absolute;
-            bottom: -40px;  
-            display: none; 
-            padding: 15px;
-            border-radius: 0 8px 8px 8px;
-            color: white;  
-            font-size: 16px;
+            top: -80px;
+            left: 5px;
+            width: 100px;
+            height: 100px;
+            background-color: inherit;
+            z-index: -1;
         }
 
-        .bolinha.active .categ-dropdown {
-            display: block;
-        }
+  
+
+
+
 
 
 /* fonte da logo/detalhes */

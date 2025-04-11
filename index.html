@@ -4,9 +4,11 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="Stylesheet" href="CSS/index.css">
+    <link rel="stylesheet" href="CSS/navbar.css" />
     <title>HomePage</title>
 </head>
 <body>
+    <div id="navbar"></div>
 
     <!-- botoes da home -->
     <div class="BotoesHome">
@@ -37,33 +39,19 @@
      <!-- categorias -->
       <h1 class="Titulo">Categorias</h1>
         <div class="categoriashome">
-            <div class="bolinha" style="background-color: #365914;">
-                <div class="categ-dropdown">
-                    <p>Texto.</p>
-                </div>
-            </div>
-            <div class="bolinha" style="background-color: #71AB3E;">
-                <div class="categ-dropdown">
-                    <p>Texto.</p>
-                </div>
-            </div>
-            <div class="bolinha" style="background-color: #D4D955;">
-                <div class="categ-dropdown">
-                    <p>Texto.</p>
-                </div>
-            </div>
-            <div class="bolinha" style="background-color: #F2EFBD;">
-                <div class="categ-dropdown">
-                    <p>Texto.</p>
-                </div>
-            </div>
-            <div class="bolinha" style="background-color: #F26B5E;">
-                <div class="categ-dropdown">
-                    <p>Texto.</p>
-                </div>
-            </div> 
+              <div class="bolinha" style="background-color: #365914;" data-index="0"></div>
+              <div class="bolinha" style="background-color: #71AB3E;" data-index="1"></div>
+              <div class="bolinha" style="background-color: #D4D955;" data-index="2"></div>
+              <div class="bolinha" style="background-color: #F2EFBD;" data-index="3"></div>
+              <div class="bolinha" style="background-color: #F26B5E;" data-index="4"></div>
+        </div>
+        <div class="categ-dropdown" id="dropdown">
+            <p id="dropdown-content">Texto da categoria</p>
         </div>
 
+
+
+        <script src="./JS/navbar.js"></script>
         <script src="./JS/categoriaDrop.js"></script>
         
 </body>
