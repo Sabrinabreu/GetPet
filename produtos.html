@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="CSS/produtos.css" />
+    <title>Produtos</title>
+</head>
+<body>
+    <script>
+        const produtos = [
+            {
+            titulo: "Ração 1kg",
+            subtitulo: "Premium",
+            imagem: "./Img/RacaoDog.png",
+            precoAntigo: "R$ 180,00",
+            precoNovo: "R$ 150,00",
+            descricao: "Ração bla bla bla bla bla bla bla bla.",
+            categoria: "Cachorro",
+            porte: "Grande"
+            },
+            {
+            titulo: "Ração 2kg",
+            subtitulo: "Premium Plus",
+            imagem: "./Img/RacaoCat.png",
+            precoAntigo: "R$ 200,00",
+            precoNovo: "R$ 170,00",
+            descricao: "Ração para gatos adultos com sabor de frango.",
+            categoria: "Gato",
+            porte: "Pequeno"
+            },
+        ];
+        </script>
+
+
+    <div id="navbar"></div>
+
+    <h1 class="Titulo">Produtos</h1>
+
+    <div id="lista-produtos" class="produtos-container"></div>
+
+        <script src="./JS/navbar.js"></script>
+        <script src="./JS/cardProdutos.js"></script>
+        
+</body>
+</html>

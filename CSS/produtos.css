@@ -1,0 +1,104 @@
+.produtos-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-content: center;
+  }
+
+.prod-card {
+    width: 250px;
+    background: #fff;
+    border-radius: 12px;
+    box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+    overflow: hidden;
+    transition: all 0.3s ease;
+}
+
+.conteudo-prod {
+    padding: 5px;
+    text-align: center;
+    position: relative;
+}
+
+.tit-prod {
+    line-height: 0;
+    font-size: 20px;
+}
+        .subtit-prod {
+            color: #999;
+            line-height: 5px;
+        }
+
+.img-prod {
+    width: 70%;
+    margin-top: 10px;
+    height: auto;
+}
+
+.preco-prod {
+    margin: 8px 0;
+}
+        .preco-antigo {
+            text-decoration: line-through;
+            color: #999;
+            font-size: 14px;
+            display: block;
+            line-height: 10px;
+        }
+        .preco-novo {
+            font-weight: bold;
+            font-size: 20px;
+        }
+  
+.detalhes-prod {
+    opacity: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: all 0.4s ease;
+    font-size: 15px;
+    color: #333;
+    margin: 10px 0;
+}
+
+.tabela-prod {
+    font-size: 16px;
+    border: 1px solid #b9b9b9;
+    border-radius: 14px;
+    padding: 0 15px;
+}
+        .tabela-prod .linha {
+            display: flex;
+            justify-content: space-between;
+            padding: 8px 0;
+            border-bottom: 1px solid #ccc;
+        }
+        .tabela-prod .linha:last-child {
+            border-bottom: none;
+        }
+        .tabela-prod .titulo {
+            font-weight: 700;
+        }
+
+
+.btn-prod {
+    background: transparent;
+    font-size: 15px;
+    border: 1px solid #7cc33f;
+    color: #7cc33f;
+    padding: 6px 15px;
+    margin-bottom: 15px;
+    border-radius: 20px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: background 0.3s;
+} 
+        .btn-prod:hover {
+            background: #7cc33f;
+            color: #fff;
+        }
+
+.prod-card:hover .detalhes-prod {
+    opacity: 1;
+    max-height: 150px;
+}
+  
