@@ -1,8 +1,9 @@
 .produtos-container {
     display: flex;
     flex-wrap: wrap;
-    gap: 20px;
+    gap: 30px;
     justify-content: center;
+    align-items: flex-start;
   }
 
 .prod-card {
@@ -101,4 +102,3 @@
     opacity: 1;
     max-height: 150px;
 }
-  
