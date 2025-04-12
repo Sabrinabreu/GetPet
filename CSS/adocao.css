@@ -1,54 +1,58 @@
-.product-card {
+  #adocao-container {
     display: flex;
-    width: 350px;
+    flex-wrap: wrap;
+    gap: 20px;
+    justify-self: center;
+  }
+
+.adocao-card {
+    display: flex;
+    width: 400px;
+    height: 230px;
     background-color: #fffdf6;
     border-radius: 12px;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
     overflow: hidden;
-    font-family: Arial, sans-serif;
-    margin: 20px;
   }
   
-  .product-image {
+  .adocao-image {
     width: 40%;
     object-fit: cover;
     height: 100%;
   }
   
-  .product-info {
+  .adocao-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
   }
+      .adocao-info h2 {
+        font-size: 20px;
+        margin: 0;
+        font-weight: bold;
+      }
+      .adocao-info p {
+        font-size: 0.9rem;
+        color: #333;
+        margin: 0;
+      }
   
-  .product-info h2 {
-    font-size: 1.2rem;
-    margin: 0;
-    font-weight: bold;
-  }
-  
-  .product-info p {
-    font-size: 0.9rem;
-    color: #333;
-    margin: 10px 0;
-  }
-  
-  .adopt-button {
-    padding: 8px 16px;
-    border: 2px solid #2ecc71;
+  .adocao-button {
+    padding: 8px 15px;
+    margin-top: 10px;
+    border: 1.5px solid #71AB3E;
     border-radius: 20px;
     background-color: transparent;
-    color: #2ecc71;
+    color: #71AB3E;
     font-weight: bold;
     cursor: pointer;
     transition: all 0.3s ease;
     align-self: flex-start;
   }
-  
-  .adopt-button:hover {
-    background-color: #2ecc71;
-    color: white;
-  }
+      .adocao-button:hover {
+        background-color: #71AB3E;
+        color: white;
+      }
   

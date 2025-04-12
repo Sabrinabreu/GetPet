@@ -102,18 +102,20 @@ body {
         .categ-dropdown::before {
             content: "";
             position: absolute;
-            top: -80px;
-            left: 5px;
-            width: 100px;
-            height: 100px;
-            background-color: inherit;
+            top: -15px;
+            left: 40px;
+            width: 0px;
+            height: 0px;
+            /* background-color: inherit; */
             z-index: -1;
+            border-left: 15px solid transparent;
+            border-right: 15px solid transparent;
+            border-bottom: 15px solid #B2B53A;
         }
 
+        
+
   
-
-
-
 
 
 /* fonte da logo/detalhes */

@@ -4,24 +4,39 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="Stylesheet" href="CSS/index.css">
     <link rel="stylesheet" href="CSS/adocao.css" />
     <title>Adoção</title>
 </head>
 <body>
+  <script>
+    const animaisAdocao = [
+  {
+    nome: "Mauro",
+    imagem: "./Img/Papagaio.png",
+    descricao: "Cachorra dócil, 3 anos, castrada e vacinada."
+  },
+  {
+    nome: "Pilha",
+    imagem: "./img/thor-gato.jpg",
+    descricao: "Gatinho carinhoso, adora colo e é muito tranquilo."
+  },
+  {
+    nome: "Killua",
+    imagem: "./img/luna-coelho.jpg",
+    descricao: "Coelhinha branca, ideal para casas com crianças."
+  }
+];
+  </script>
     <div id="navbar"></div>
 
-    <div class="product-card">
-        <img src="caminho-da-imagem.jpg" alt="Produto" class="product-image">
-        <div class="product-info">
-          <h2>Nome do Produto</h2>
-          <p>Descrição breve do produto.</p>
-          <button class="adopt-button">Adotar</button>
-        </div>
-      </div>
-      
+    <h1 class="Titulo">Adoção de animais</h1>
+
+    <div id="adocao-container"></div> 
 
 
         <script src="./JS/navbar.js"></script>
+        <script src="./JS/cardAdocao.js"></script>
         
 </body>
 </html>
