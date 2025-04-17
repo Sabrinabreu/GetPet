@@ -9,75 +9,23 @@
     <title>Produtos</title>
 </head>
 <body>
-    <script>
-        const produtos = [
-            {
-            titulo: "Ração 1kg",
-            subtitulo: "Premium",
-            imagem: "./Img/RacaoDog.png",
-            precoAntigo: "R$ 180,00",
-            precoNovo: "R$ 150,00",
-            descricao: "Ração bla bla bla bla bla bla bla bla.",
-            categoria: "Cachorro",
-            porte: "Grande"
-            },
-            {
-            titulo: "Ração 2kg",
-            subtitulo: "Premium Plus",
-            imagem: "./Img/RacaoCat.png",
-            precoAntigo: "R$ 200,00",
-            precoNovo: "R$ 170,00",
-            descricao: "Ração para gatos adultos com sabor de frango.",
-            categoria: "Gato",
-            porte: "Pequeno"
-            },
-            {
-            titulo: "Ração 1kg",
-            subtitulo: "Premium",
-            imagem: "./Img/RacaoDog.png",
-            precoAntigo: "R$ 180,00",
-            precoNovo: "R$ 150,00",
-            descricao: "Ração bla bla bla bla bla bla bla bla.",
-            categoria: "Cachorro",
-            porte: "Grande"
-            },
-            {
-            titulo: "Ração 2kg",
-            subtitulo: "Premium Plus",
-            imagem: "./Img/RacaoCat.png",
-            precoAntigo: "R$ 200,00",
-            precoNovo: "R$ 170,00",
-            descricao: "Ração para gatos adultos com sabor de frango.",
-            categoria: "Gato",
-            porte: "Pequeno"
-            },
-            {
-            titulo: "Ração 1kg",
-            subtitulo: "Premium",
-            imagem: "./Img/RacaoDog.png",
-            precoAntigo: "R$ 180,00",
-            precoNovo: "R$ 150,00",
-            descricao: "Ração bla bla bla bla bla bla bla bla.",
-            categoria: "Cachorro",
-            porte: "Grande"
-            },
-            {
-            titulo: "Ração 2kg",
-            subtitulo: "Premium Plus",
-            imagem: "./Img/RacaoCat.png",
-            precoAntigo: "R$ 200,00",
-            precoNovo: "R$ 170,00",
-            descricao: "Ração para gatos adultos com sabor de frango.",
-            categoria: "Gato",
-            porte: "Pequeno"
-            },
-        ];
-        </script>
-
 
     <div id="navbar"></div>
 
     <h1 class="Titulo">Produtos</h1>
+
+    <div id="filtros" style="margin-bottom: 20px; text-align: center;">
+        <input type="text" id="filtro-nome" placeholder="Buscar por nome ou marca..." style="padding: 8px; width: 250px;">
+        <select id="filtro-categoria" style="padding: 8px;">
+            <option value="">Todas as categorias</option>
+            <option value="Cachorro">Cachorro</option>
+            <option value="Gato">Gato</option>
+            <option value="Peixe">Peixe</option>
+            <option value="Roedor">Roedor</option>
+            <option value="Pássaro">Pássaro</option>
+        </select>
+        </div>
+      
 
     <div id="lista-produtos" class="produtos-container"></div>
 

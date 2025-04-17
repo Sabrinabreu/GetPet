@@ -22,7 +22,7 @@
 }
 
 .tit-prod {
-    line-height: 0;
+    line-height: 1;
     font-size: 20px;
 }
         .subtit-prod {
@@ -31,9 +31,8 @@
         }
 
 .img-prod {
-    width: 70%;
     margin-top: 10px;
-    height: auto;
+    height: 150px;
 }
 
 .preco-prod {
@@ -97,8 +96,7 @@
             background: #7cc33f;
             color: #fff;
         }
-
-.prod-card:hover .detalhes-prod {
-    opacity: 1;
-    max-height: 150px;
-}
+        .detalhes-prod.aberto {
+            opacity: 1;
+            max-height: 1000px;
+        }        

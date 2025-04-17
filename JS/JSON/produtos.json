@@ -1,0 +1,103 @@
+[
+    {
+      "titulo": "Ração Premium 10kg",
+      "subtitulo": "Golden",
+      "imagem": "./Img/RacaoDog.png",
+      "precoAntigo": "R$ 220,00",
+      "precoNovo": "R$ 180,00",
+      "descricao": "Ração completa para cães adultos de porte médio e grande.",
+      "categoria": "Cachorro",
+      "porte": "Grande"
+    },
+    {
+      "titulo": "Coleira Ajustável",
+      "subtitulo": "PetSafe",
+      "imagem": "./Img/coleiraDog.jpg",
+      "precoAntigo": "R$ 40,00",
+      "precoNovo": "R$ 29,90",
+      "descricao": "Coleira com ajuste fácil e fecho seguro para passeios tranquilos.",
+      "categoria": "Cachorro",
+      "porte": "Médio"
+    },
+    {
+      "titulo": "Camiseta basica Pet",
+      "subtitulo": "DogStyle",
+      "imagem": "./Img/camisaDog.jpg",
+      "precoAntigo": "R$ 45,00",
+      "precoNovo": "R$ 35,00",
+      "descricao": "Camiseta para cachorro com tecido confortável.",
+      "categoria": "Cachorro",
+      "porte": "Pequeno"
+    },
+    {
+      "titulo": "Ração para Gatos 5kg",
+      "subtitulo": "Whiskas",
+      "imagem": "./Img/racaoGato.png",
+      "precoAntigo": "R$ 130,00",
+      "precoNovo": "R$ 110,00",
+      "descricao": "Ração sabor frango com nutrientes essenciais para gatos adultos.",
+      "categoria": "Gato",
+      "porte": "Médio"
+    },
+    {
+      "titulo": "Areia Higiênica 2kg",
+      "subtitulo": "Pipicat",
+      "imagem": "./Img/areiaHigienica.webp",
+      "precoAntigo": "R$ 35,00",
+      "precoNovo": "R$ 27,00",
+      "descricao": "Areia higiênica com grãos finos e controle de odores.",
+      "categoria": "Gato",
+      "porte": "Todos"
+    },
+    {
+      "titulo": "Aquário 20L com tampa",
+      "subtitulo": "Aquapet",
+      "imagem": "./Img/aquarioGrande.png",
+      "precoAntigo": "R$ 200,00",
+      "precoNovo": "R$ 170,00",
+      "descricao": "Aquário resistente com acabamento premium e tampa com LED.",
+      "categoria": "Peixe",
+      "porte": "Pequeno"
+    },
+    {
+      "titulo": "Ração para Peixes Tropicais",
+      "subtitulo": "Nutrópica",
+      "imagem": "./Img/racao-peixe.png",
+      "precoAntigo": "R$ 25,00",
+      "precoNovo": "R$ 19,90",
+      "descricao": "Ração flocada ideal para peixes tropicais de água doce.",
+      "categoria": "Peixe",
+      "porte": "Todos"
+    },
+    {
+      "titulo": "Comedouro Duplo",
+      "subtitulo": "Chalesco",
+      "imagem": "./Img/comedouro-roedor.png",
+      "precoAntigo": "R$ 35,00",
+      "precoNovo": "R$ 28,00",
+      "descricao": "Comedouro duplo em inox, resistente e fácil de limpar.",
+      "categoria": "Roedor",
+      "porte": "Pequeno"
+    },
+    {
+      "titulo": "Ração para Hamsters 1kg",
+      "subtitulo": "Nutrópica",
+      "imagem": "./Img/racao-hamster.png",
+      "precoAntigo": "R$ 20,00",
+      "precoNovo": "R$ 15,00",
+      "descricao": "Mistura nutritiva com grãos, sementes e frutas desidratadas.",
+      "categoria": "Roedor",
+      "porte": "Pequeno"
+    },
+    {
+      "titulo": "Ração para Canários",
+      "subtitulo": "Nutrópica",
+      "imagem": "./Img/racao-passaro.png",
+      "precoAntigo": "R$ 18,00",
+      "precoNovo": "R$ 14,00",
+      "descricao": "Ração balanceada para canários com grãos selecionados.",
+      "categoria": "Pássaro",
+      "porte": "Pequeno"
+    }
+  ]
+  
