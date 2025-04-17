@@ -24,6 +24,7 @@ bolinhas.forEach((bolinha, index) => {
 
       dropdown.style.display = 'block';
       dropdown.style.backgroundColor = bolinha.style.backgroundColor;
+      dropdown.style.setProperty('--triangulo-color', bolinha.style.backgroundColor);
 
       // Aqui mostra o conteúdo + um link que leva pros produtos já filtrado
       dropdownContent.innerHTML = `

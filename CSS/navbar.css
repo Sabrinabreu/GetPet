@@ -15,10 +15,11 @@ nav {
   border-bottom: 1px solid #eee;
 }
 
-.nav-logo {
+.nav-logo img{
   margin: 0;
   padding: 0;
-  height: 70px;
+  margin-top: 5px;
+  height: 60px;
 }
 
 .nav-links {

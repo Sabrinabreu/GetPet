@@ -98,7 +98,7 @@ body {
     z-index: 1;
     transition: all 0.3s ease;
   }
-        /* quadrado q conecta a bolinha com o bloco */
+        /* triangulo q conecta a bolinha com o bloco */
         .categ-dropdown::before {
             content: "";
             position: absolute;
@@ -106,11 +106,11 @@ body {
             left: 40px;
             width: 0px;
             height: 0px;
-            /* background-color: inherit; */
             z-index: -1;
             border-left: 15px solid transparent;
             border-right: 15px solid transparent;
-            border-bottom: 15px solid #B2B53A;
+            border-bottom: 15px solid var(--triangulo-color);
+            transition: all 0.3s ease;
         }
         .categ-dropdown p{
             margin-left: 30px;
