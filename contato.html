@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1" />
+  <title>Contato - GetPet</title>
+    <link rel="stylesheet" href="CSS/navbar.css" />
+    <link rel="stylesheet" href="CSS/index.css" />
+    <link rel="stylesheet" href="./CSS/contato.css" />
+</head>
+<body>
+    <div id="navbar"></div>
+
+  <!-- formulário e imagem -->
+    <div class="container-contato">
+        <div class="formulario-contato">
+            <h1 class="Titulo">Entre em contato conosco</h1>
+            <input type="text" placeholder="Seu nome" required />
+            <input type="email" placeholder="Seu e-mail" required />
+            <input type="text" placeholder="Assunto" />
+            <textarea rows="5" placeholder="Escreva sua mensagem aqui..." required></textarea>
+            <button class="btn-cont" type="submit">Enviar mensagem</button>
+        </div>
+        <div class="imagem-contato">
+            <img src="./Img/contatoDog.png">
+        </div>
+    </div>
+
+  <!-- Card com mapa e informações -->
+    <div class="card-infos">
+        <div class="mapa">
+            <iframe 
+            src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3656.470392888332!2d-46.64848168442442!3d-23.588003968391695!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x94ce59c21d9a70eb%3A0x12cb76384132e2ff!2sAv.%20Paulista%2C%201000%20-%20Bela%20Vista%2C%20S%C3%A3o%20Paulo%20-%20SP!5e0!3m2!1spt-BR!2sbr!4v1615467315193!5m2!1spt-BR!2sbr" 
+            allowfullscreen="" 
+            loading="lazy">
+            </iframe>
+        </div>
+        <div class="infos-escritorio">
+            <h1 class="Titulo">Nosso Escritório</h1>
+            <p><strong>Endereço:</strong> Av. Paulista, 1000 - São Paulo, SP</p>
+            <p><strong>Telefone:</strong> (11) 91234-5678</p>
+            <p><strong>CNPJ:</strong> 12.345.678/0001-99</p>
+            <p><strong>Horário de funcionamento:</strong> Seg a Sex, 9h às 18h</p>
+            <p><strong>Email:</strong> contato@getpet.org</p>
+        </div>
+    </div>
+
+    <script src="./JS/navbar.js"></script>
+</body>
+</html>

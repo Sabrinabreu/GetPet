@@ -1,0 +1,33 @@
+.container-sobrenos {
+    display: flex;
+
+}
+
+.texto-sobrenos {
+    flex: 1;
+    padding: 60px;
+    background-color: #e3e770;
+    border-bottom-right-radius: 20px;
+    color: #333;
+}
+        .texto-sobrenos .Titulo {
+            margin-left: 0;
+            font-size: 36px;
+            color: #365914;
+            margin-bottom: 20px;
+        }
+        .texto-sobrenos p {
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 15px;
+        }
+        
+.imagem-sobrenos {
+    flex: 1;
+    overflow: hidden;
+}
+        .imagem-sobrenos img {
+            width: 100%;
+            height: 100%;
+            object-fit: cover;
+        }

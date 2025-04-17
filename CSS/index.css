@@ -1,12 +1,3 @@
-@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
-@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&family=Rammetto+One&display=swap');
-
-body {
-    font-family: "Mukta Vaani", sans-serif;
-    background-color: #FAF8EB;
-    margin-top: 90px;
-}
-
 .BotoesHome {
     display: flex; 
     flex-direction: row;
@@ -22,6 +13,7 @@ body {
     height: 50px;
     font-size: 17px;
     cursor: pointer;
+    margin-top: 20px;
     transition: background-color 0.3s;
 }
         .BotoesHome button:hover {
@@ -64,10 +56,6 @@ body {
             margin-top: 20px;
         }
 
-.Titulo {
-    font-family: "Rammetto One", sans-serif;
-    margin-left: 100px;
-}
 
 .categoriashome {
     display: flex;
@@ -115,19 +103,3 @@ body {
         .categ-dropdown p{
             margin-left: 30px;
         }
-
-
-
-/* fonte da logo/detalhes */
-.rammetto-one-regular {
-    font-family: "Rammetto One", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }
-
-  /* fonte geral */
-  .mukta-vaani-regular {
-    font-family: "Mukta Vaani", sans-serif;
-    font-weight: 400;
-    font-style: normal;
-  }

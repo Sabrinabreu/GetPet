@@ -1,3 +1,13 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&family=Rammetto+One&display=swap');
+
+
+body {
+  font-family: "Mukta Vaani", sans-serif;
+  background-color: #FAF8EB;
+  margin-top: 75px;
+}
+
 .navbar-container {
   position: fixed;
   top: 0;
@@ -48,4 +58,25 @@ nav {
 
 .nav-links a:hover::after {
   width: 100%;
+}
+
+
+.Titulo {
+  font-family: "Rammetto One", sans-serif;
+  margin-left: 100px;
+}
+
+
+/* fonte da logo/detalhes */
+.rammetto-one-regular {
+  font-family: "Rammetto One", sans-serif;
+  font-weight: 400;
+  font-style: normal;
+}
+
+/* fonte geral */
+.mukta-vaani-regular {
+  font-family: "Mukta Vaani", sans-serif;
+  font-weight: 400;
+  font-style: normal;
 }
