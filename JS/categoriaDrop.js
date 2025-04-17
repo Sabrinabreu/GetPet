@@ -2,12 +2,12 @@ const bolinhas = document.querySelectorAll('.bolinha');
 const dropdown = document.getElementById('dropdown');
 const dropdownContent = document.getElementById('dropdown-content');
 
-const textos = [
-  "Conteúdo da categoria 1",
-  "Conteúdo da categoria 2",
-  "Conteúdo da categoria 3",
-  "Conteúdo da categoria 4",
-  "Conteúdo da categoria 5"
+const categorias = [
+  { nome: "Cachorro", valor: "cachorro" },
+  { nome: "Gato", valor: "gato" },
+  { nome: "Pássaro", valor: "passaro" },
+  { nome: "Peixe", valor: "peixe" },
+  { nome: "Roedor", valor: "roedor" }
 ];
 
 bolinhas.forEach((bolinha, index) => {
@@ -20,9 +20,16 @@ bolinhas.forEach((bolinha, index) => {
       dropdown.style.display = 'none';
     } else {
       bolinha.classList.add('active');
+      const categoria = categorias[index];
+
       dropdown.style.display = 'block';
-      dropdownContent.textContent = textos[index];
       dropdown.style.backgroundColor = bolinha.style.backgroundColor;
+
+      // Aqui mostra o conteúdo + um link que leva pros produtos já filtrado
+      dropdownContent.innerHTML = `
+        <span>${categoria.nome}</span><br>
+        <a href="produtos.html?categoria=${encodeURIComponent(categoria.valor)}" style="color: white; text-decoration: underline;">Ver produtos de ${categoria.nome}</a>
+      `;
     }
   });
 });

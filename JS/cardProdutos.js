@@ -66,7 +66,12 @@ function aplicarFiltros() {
 
   const filtrados = produtos.filter(prod => {
     const nomeMatch = prod.titulo.toLowerCase().includes(nomeBuscado) || prod.subtitulo.toLowerCase().includes(nomeBuscado);
-    const categoriaMatch = categoriaSelecionada === "" || prod.categoria === categoriaSelecionada;
+
+    // a categoria muda pra minusculo
+    const normalizar = str => str.normalize("NFD").replace(/[\u0300-\u036f]/g, "").toLowerCase(); 
+      const categoriaMatch =
+      categoriaSelecionada === "" ||
+      normalizar(prod.categoria) === normalizar(categoriaSelecionada);
 
     return nomeMatch && categoriaMatch;
   });
@@ -78,11 +83,20 @@ function aplicarFiltros() {
 inputNome.addEventListener("input", aplicarFiltros);
 selectCategoria.addEventListener("change", aplicarFiltros);
 
-// buscar os produtos no JSON
+// procura os produtos no JSON 
 fetch("./JS/JSON/produtos.json")
   .then(res => res.json())
   .then(data => {
     produtos = data;
-    renderizarProdutos(produtos);
+
+    // Verifica se tem ?categoria=algumacoisa na URL
+    const urlParams = new URLSearchParams(window.location.search);
+    const categoriaURL = urlParams.get("categoria");
+
+    if (categoriaURL) {
+      selectCategoria.value = categoriaURL;
+    }
+
+    aplicarFiltros();
   })
   .catch(err => console.error("Erro ao carregar produtos:", err));
