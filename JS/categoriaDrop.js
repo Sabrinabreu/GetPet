@@ -26,11 +26,17 @@ bolinhas.forEach((bolinha, index) => {
       dropdown.style.backgroundColor = bolinha.style.backgroundColor;
       dropdown.style.setProperty('--triangulo-color', bolinha.style.backgroundColor);
 
-      // Aqui mostra o conteúdo + um link que leva pros produtos já filtrado
       dropdownContent.innerHTML = `
         <span>${categoria.nome}</span><br>
         <a href="produtos.html?categoria=${encodeURIComponent(categoria.valor)}" style="color: white; text-decoration: underline;">Ver produtos de ${categoria.nome}</a>
       `;
+
+      // TRIÂNGULO
+      const bolinhaRect = bolinha.getBoundingClientRect();
+      const dropdownRect = dropdown.getBoundingClientRect();
+      const trianguloLeft = bolinhaRect.left + bolinhaRect.width / 2 - dropdownRect.left - 15;
+
+      dropdown.style.setProperty('--triangulo-left', `${trianguloLeft}px`);
     }
   });
 });

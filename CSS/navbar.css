@@ -8,6 +8,12 @@ body {
   margin-top: 75px;
 }
 
+.centralizar {
+    display: block;
+    text-align: -webkit-center;
+    unicode-bidi: isolate;
+}
+
 .navbar-container {
   position: fixed;
   top: 0;
