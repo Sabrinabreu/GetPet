@@ -35,10 +35,9 @@ function aplicarFiltros() {
 
   const filtrados = animaisAdocao.filter(animal => {
     const nomeMatch = animal.nome.toLowerCase().includes(termo);
-    const descMatch = animal.descricao.toLowerCase().includes(termo);
     const tipoMatch = tipoSelecionado === "todos" || animal.animal === tipoSelecionado;
 
-    return (nomeMatch || descMatch) && tipoMatch;
+    return (nomeMatch) && tipoMatch;
   });
 
   renderAnimais(filtrados);
