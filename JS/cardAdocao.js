@@ -1,5 +1,5 @@
 // adoção.js
-import animais from './animais.js';  // Ajuste o caminho conforme necessário
+import animais from './animais.js';
 
 const container = document.getElementById("adocao-container");
 const inputFiltro = document.getElementById("filtro-adocao");
@@ -24,7 +24,7 @@ function renderAnimais(lista) {
       <div class="adocao-info">
         <h2>${animal.nome}</h2>
         <p>${animal.descricao}</p>
-        <button class="adocao-button">Adotar</button>
+        <button onclick="dispararConfetes()" class="adocao-button">Adotar</button>
       </div>
     `;
 
