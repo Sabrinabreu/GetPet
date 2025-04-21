@@ -1,17 +1,17 @@
-  #adocao-container {
+#adestramento-container {
     display: flex;
     flex-wrap: wrap;
     gap: 40px;
     justify-content: center;
   }
-
-.adocaoTit {
-  margin-top: 100px;
-  font-size: 2rem;
-  font-weight: bold;
-}
-
-.adocao-card {
+  
+  .adestramentoTit {
+    margin-top: 100px;
+    font-size: 2rem;
+    font-weight: bold;
+  }
+  
+  .adestramento-card {
     display: flex;
     width: 400px;
     height: 230px;
@@ -21,31 +21,33 @@
     overflow: hidden;
   }
   
-  .adocao-image {
+  .adestramento-image {
     width: 40%;
     object-fit: cover;
     height: 100%;
   }
   
-  .adocao-info {
+  .adestramento-info {
     padding: 20px;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
     flex: 1;
   }
-      .adocao-info h2 {
-        font-size: 20px;
-        margin: 0;
-        font-weight: bold;
-      }
-      .adocao-info p {
-        font-size: 0.9rem;
-        color: #333;
-        margin: 0;
-      }
   
-  .adocao-button {
+  .adestramento-info h2 {
+    font-size: 20px;
+    margin: 0;
+    font-weight: bold;
+  }
+  
+  .adestramento-info p {
+    font-size: 0.9rem;
+    color: #333;
+    margin: 0;
+  }
+  
+  .adestramento-button {
     padding: 8px 15px;
     margin-top: 10px;
     border: 1.5px solid #71AB3E;
@@ -57,8 +59,9 @@
     transition: all 0.3s ease;
     align-self: flex-start;
   }
-      .adocao-button:hover {
-        background-color: #71AB3E;
-        color: white;
-      }
+  
+  .adestramento-button:hover {
+    background-color: #71AB3E;
+    color: white;
+  }
   
