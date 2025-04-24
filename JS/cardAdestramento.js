@@ -35,12 +35,12 @@ const servicosAdestramento = [
   },
   {
     nome: "Adestramento Avançado",
-    imagem: "./Img/adestramentoAvancado.png",
+    imagem: "./Img/adestramentoAvancado.jfif",
     descricao: "Treinamento para controle de comportamento, obediência avançada e habilidades especiais.",
   },
   {
     nome: "Adestramento de Filhotes",
-    imagem: "./Img/adestramentoFilhote.png",
+    imagem: "./Img/adestramentoFilhote.avif",
     descricao: "Programa especial para filhotes, focando em socialização e hábitos saudáveis.",
   },
   {
@@ -50,7 +50,7 @@ const servicosAdestramento = [
   },
   {
     nome: "Adestramento Personalizado",
-    imagem: "./Img/adestramentoPersonalizado.png",
+    imagem: "./Img/adestramentoPersonalizado.jpeg",
     descricao: "Treinamento sob medida, adaptado às necessidades do seu pet e estilo de vida.",
   }
 ];
