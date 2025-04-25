@@ -11,22 +11,24 @@
     <div id="navbar"></div>
 
     <!-- filtro  -->
-      <div id="filtros-tipo" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px;">
-        <button class="filtro-btn" data-tipo="todos">Todos</button>
-        <button class="filtro-btn" data-tipo="cachorro">Cachorro</button>
-        <button class="filtro-btn" data-tipo="gato">Gato</button>
-        <button class="filtro-btn" data-tipo="passaro">Pássaro</button>
-        <button class="filtro-btn" data-tipo="réptil">Réptil</button>
-        <button class="filtro-btn" data-tipo="roedor">Roedor</button>
-        <button class="filtro-btn" data-tipo="lagomorfo">Lagomorfo</button>
-      </div>
+     <div class="filtros">
+        <div id="filtros-tipo" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px;">
+          <button class="filtro-btn" data-tipo="todos">Todos</button>
+          <button class="filtro-btn" data-tipo="cachorro">Cachorro</button>
+          <button class="filtro-btn" data-tipo="gato">Gato</button>
+          <button class="filtro-btn" data-tipo="passaro">Pássaro</button>
+          <button class="filtro-btn" data-tipo="réptil">Réptil</button>
+          <button class="filtro-btn" data-tipo="roedor">Roedor</button>
+          <button class="filtro-btn" data-tipo="lagomorfo">Lagomorfo</button>
+        </div>
+        
+        <input class="filtro-input"
+          type="text" 
+          id="filtro-adocao" 
+          placeholder="Pesquisar por nome ou raça..."
+        >
+     </div>
       
-      <input 
-        type="text" 
-        id="filtro-adocao" 
-        placeholder="Pesquisar por nome ou raça..." 
-        style="margin: 0 auto 20px auto; display: block; padding: 10px; font-size: 16px; border-radius: 8px; border: 1px solid #ccc;"
-      >
 
 
     <h1 class="Titulo adocaoTit">Adoção de animais</h1>
