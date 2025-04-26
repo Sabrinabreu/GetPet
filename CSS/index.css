@@ -20,10 +20,12 @@
             text-decoration: none;
             text-align: center;
             align-content: center;
+            z-index: 11 !important;
         }
 
             .BotoesHome a:hover {
                 background-color: #B2B53A !important; 
+                z-index: 11 !important;
             }
         
 
@@ -51,6 +53,7 @@
 
 .BannerConteudo {
     width: 100%;
+    height: 28vw;
     display: flex;
     justify-content: space-between;
     align-items: center;
