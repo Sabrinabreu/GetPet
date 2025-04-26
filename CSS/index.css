@@ -23,42 +23,67 @@
         .BotoesHome a:hover {
             background-color: #B2B53A !important; 
         }
+        
 
 .BannerConteiner {
     background-color: #F26B5E;
-    width: 90vw; 
+    width: 90vw;
     height: 250px;
     margin: 0 auto;
-    display: flex; 
-    justify-content: center;
     overflow: visible;
     position: relative;
+    display: flex;
+    align-items: center;
+}
+
+.BannerFrame {
+    overflow: hidden; /* ESSENCIAL! Ele esconde os banners que não estão ativos */
+}
+
+.BannerSlider {
+    display: flex;
+    transition: transform 2s ease-in-out;
+    width: 100%; 
 }
 
 .BannerConteudo {
-    width: 100%; 
-    height: 100%;
+    width: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    position: absolute;
+    flex-shrink: 0;
+    padding: 0;
 }
+        
         .TextoBanner {
             padding-left: 40px;
         }
+        
         .BannerConteudo h2 {
             color: white;
             font-size: 70px;
             line-height: 0;
         }
+        
         .BannerConteudo p {
             line-height: 30px;
             color: white;
             font-size: 30px;
         }
+        
         .BannerDog {
             margin-top: 90px;
         }
+        
+        .BannerCat {
+            margin-top: 80px;
+        }
+        
+        .BannerDog2 {
+            margin-top: 96px;
+            width: 600px;
+        }
+                
 
 
 .categoriashome {
