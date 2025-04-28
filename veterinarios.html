@@ -12,104 +12,116 @@
   <h1 class="Titulo titulo-pagina">Nossos Veterinários</h1>
 
 
+  <div class="filtros">
+    <input class="filtro-input" type="text" id="filtro-nome" placeholder="Buscar por nome..." onkeyup="filtrarVets()" />
+  
+    <select class="filtro-select" id="filtro-especialidade" onchange="filtrarVets()">
+      <option value="">Sem filtro</option>
+      <option value="clinico">Clínico</option>
+      <option value="silvestre">Silvestre</option>
+      <option value="reptil">Réptil</option>
+    </select>
+  </div> 
+  
+
   <div class="container-cards">
 
     <div class="card-vet">
-        <h3 class="nome-vet" >Renata Gomez</h3>
-        <img class="img-vet" src="img/vet1.png" class="vet-foto"/>
+      <h3 class="nome-vet">Renata Gomez</h3>
+      <img class="img-vet" src="img/vet1.png" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
           <img src="img/clinico.png"/>
           <img src="img/Silvestre.png"/>
           <img src="img/Reptil.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Sou apaixonada por veterinária. Amo cuidar dos bichinhos! Me contrata 🐾</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Atuo com dedicação em clínica geral e animais exóticos. Meu foco é oferecer cuidado e carinho em cada atendimento! 🐶</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-          <h3 class="nome-vet" >Carla Silva</h3>
-          <img class="img-vet" src="img/vet2.jpg" class="vet-foto"/>
-        <div class="card_menor">
-          <div class="vet-especialidade">
-            <img src="img/Silvestre.png"/>
+      <h3 class="nome-vet">Carla Silva</h3>
+      <img class="img-vet" src="img/vet2.jpg" class="vet-foto"/>
+      <div class="card_menor">
+        <div class="vet-especialidade">
+          <img src="img/Silvestre.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Especialista em animais silvestres! Vamos cuidar da natureza juntos 🌿</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Bióloga e veterinária apaixonada por fauna silvestre. Trabalho para preservar vidas e cuidar da biodiversidade! 🌱</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-        <h3 class="nome-vet" >Lucas Lima</h3>
-        <img class="img-vet" src="img/vet3.jpg" class="vet-foto"/>
+      <h3 class="nome-vet">Lucas Lima</h3>
+      <img class="img-vet" src="img/vet3.jpg" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
           <img src="img/Silvestre.png"/>
           <img src="img/Reptil.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Tenho experiência com pets exóticos e adoro desafios! 🦎</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Sou fascinado por animais não convencionais. Tenho anos de experiência com espécies exóticas e selvagens! 🦜🦎</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-        <h3 class="nome-vet" >Laryssa Portugal</h3>
-        <img class="img-vet" src="img/vet1.png" class="vet-foto"/>
+      <h3 class="nome-vet">Laryssa Portugal</h3>
+      <img class="img-vet" src="img/vet4.jpg" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
           <img src="img/clinico.png"/>
-          <img src="img/Silvestre.png"/>
+        </div>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Clínica geral com foco em bem-estar animal. Trato cada pet como membro da família! 💕</p>
+      </div>
+    </div>
+    
+    <div class="card-vet">
+      <h3 class="nome-vet">Felipe Zaguetti</h3>
+      <img class="img-vet" src="img/vet5.jpg" class="vet-foto"/>
+      <div class="card_menor">
+        <div class="vet-especialidade">
           <img src="img/Reptil.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Sou apaixonada por veterinária. Amo cuidar dos bichinhos! Me contrata 🐾</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Especialista em répteis e animais exóticos. Meu compromisso é com a saúde e respeito à natureza! 🐢</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-        <h3 class="nome-vet" >Felipe Zaguetti</h3>
-        <img class="img-vet" src="img/vet2.jpg" class="vet-foto"/>
+      <h3 class="nome-vet">Kauã Junior</h3>
+      <img class="img-vet" src="img/vet8.jpg" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
-          <img src="img/Silvestre.png"/>
-        </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Especialista em animais silvestres! Vamos cuidar da natureza juntos 🌿</p>
-      </div>
-    </div>
-
-    <div class="card-vet">
-        <h3 class="nome-vet" >Kauã Junior</h3>
-        <img class="img-vet" src="img/vet3.jpg" class="vet-foto"/>
-      <div class="card_menor">
-        <div class="vet-especialidade">
-          <img src="img/Silvestre.png"/>
+          <img src="img/Clinico.png"/>
           <img src="img/Reptil.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Tenho experiência com pets exóticos e adoro desafios! 🦎</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Atendo pets e espécies exóticas com atenção personalizada. Adoro novos desafios e aprendizados constantes! 🔍</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-        <h3 class="nome-vet" >Samara Miller</h3>
-        <img class="img-vet" src="img/vet2.jpg" class="vet-foto"/>
+      <h3 class="nome-vet">Samara Miller</h3>
+      <img class="img-vet" src="img/vet6.jpg" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
           <img src="img/Silvestre.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Especialista em animais silvestres! Vamos cuidar da natureza juntos 🌿</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Amo trabalhar com animais silvestres. Meu objetivo é promover saúde e equilíbrio ambiental! 🌳</p>
       </div>
     </div>
-
+    
     <div class="card-vet">
-        <h3 class="nome-vet" >Nathan Rosa</h3>
-        <img class="img-vet" src="img/vet3.jpg" class="vet-foto"/>
+      <h3 class="nome-vet">Nathan Rosa</h3>
+      <img class="img-vet" src="img/vet7.jpeg" class="vet-foto"/>
       <div class="card_menor">
         <div class="vet-especialidade">
+          <img src="img/Clinico.png"/>
           <img src="img/Silvestre.png"/>
-          <img src="img/Reptil.png"/>
         </div>
-      <p class="sobre-vet"><strong>Sobre mim:</strong> Tenho experiência com pets exóticos e adoro desafios! 🦎</p>
+        <p class="sobre-vet"><strong>Sobre mim:</strong> Cuido de pets e animais silvestres com técnica e sensibilidade. A saúde animal é minha prioridade! 🐾</p>
       </div>
     </div>
+    
   </div>
 
   <script src="./JS/navbar.js"></script>
+  <script src="./JS/cardsVet.js"></script>
 </body>
 </html>

@@ -1,8 +1,28 @@
+.filtros {
+  text-align: center;
+  margin-bottom: 40px;
+}
+      .filtro-input {
+          padding: 10px;
+          width: 250px;
+          border: 0;
+          border-radius: 20px 0 0 20px;
+      }
+      .filtro-select {
+          padding: 10px;
+          width: 170px;
+          border: 0;
+          border-radius: 0 20px 20px 0;
+          background-color: #D4D955;
+      }
+
+  
   .titulo-pagina {
     text-align: center;
     color: #2d572c;
     margin-top: 6rem;
     margin-bottom: 2.5rem;
+    margin-left: 0 !important;
   }
   
   .container-cards {
