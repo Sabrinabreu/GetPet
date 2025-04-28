@@ -1,11 +1,10 @@
-// adoção.js
 import animais from './animais.js';
 
 const container = document.getElementById("adocao-container");
 const inputFiltro = document.getElementById("filtro-adocao");
-const botoesFiltro = document.querySelectorAll(".filtro-btn");
+const selectFiltro = document.getElementById("filtro-tipo");
 
-let tipoSelecionado = "todos";
+let tipoSelecionado = "todos"; // O valor inicial é "todos"
 
 function renderAnimais(lista) {
   container.innerHTML = "";
@@ -40,7 +39,7 @@ function aplicarFiltros() {
     const nomeMatch = animal.nome.toLowerCase().includes(termo);
     const tipoMatch = tipoSelecionado === "todos" || animal.animal === tipoSelecionado;
 
-    return (nomeMatch) && tipoMatch;
+    return nomeMatch && tipoMatch;
   });
 
   renderAnimais(filtrados);
@@ -48,15 +47,11 @@ function aplicarFiltros() {
 
 inputFiltro.addEventListener("input", aplicarFiltros);
 
-botoesFiltro.forEach(btn => {
-  btn.addEventListener("click", () => {
-    tipoSelecionado = btn.dataset.tipo;
+// Evento para alterar o filtro de tipo com o select
+selectFiltro.addEventListener("change", () => {
+  tipoSelecionado = selectFiltro.value; // Pega o valor do select
 
-    botoesFiltro.forEach(b => b.classList.remove("ativo"));
-    btn.classList.add("ativo");
-
-    aplicarFiltros();
-  });
+  aplicarFiltros();
 });
 
 renderAnimais(animais);

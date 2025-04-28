@@ -10,28 +10,23 @@
 <body>
     <div id="navbar"></div>
 
-    <!-- filtro  -->
-     <div class="filtros">
-        <div id="filtros-tipo" style="display: flex; flex-wrap: wrap; justify-content: center; gap: 10px; margin-bottom: 20px;">
-          <button class="filtro-btn" data-tipo="todos">Todos</button>
-          <button class="filtro-btn" data-tipo="cachorro">Cachorro</button>
-          <button class="filtro-btn" data-tipo="gato">Gato</button>
-          <button class="filtro-btn" data-tipo="passaro">Pássaro</button>
-          <button class="filtro-btn" data-tipo="réptil">Réptil</button>
-          <button class="filtro-btn" data-tipo="roedor">Roedor</button>
-          <button class="filtro-btn" data-tipo="lagomorfo">Lagomorfo</button>
-        </div>
-        
-        <input class="filtro-input"
-          type="text" 
-          id="filtro-adocao" 
-          placeholder="Pesquisar por nome ou raça..."
-        >
-     </div>
-      
-
-
     <h1 class="Titulo adocaoTit">Adoção de animais</h1>
+
+    <!-- filtro  -->
+    <div class="filtros">        
+      <input class="filtro-input" type="text" id="filtro-adocao" placeholder="Pesquisar por nome...">
+
+        <select class="filtro-select" id="filtro-tipo" style="padding: 8px;">
+          <option value="todos">Todos</option>
+          <option value="cachorro">Cachorro</option>
+          <option value="gato">Gato</option>
+          <option value="passaro">Pássaro</option>
+          <option value="réptil">Réptil</option>
+          <option value="roedor">Roedor</option>
+          <option value="lagomorfo">Lagomorfo</option>
+        </select>
+      </div> 
+
 
     <div id="adocao-container"></div> 
 
