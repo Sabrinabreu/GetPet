@@ -3,13 +3,13 @@
   margin-bottom: 40px;
 }
       .filtro-input {
-          padding: 10px;
+          padding: 10px !important;
           width: 250px;
           border: 0;
           border-radius: 20px 0 0 20px;
       }
       .filtro-select {
-          padding: 10px;
+          padding: 10px !important;
           width: 170px;
           border: 0;
           border-radius: 0 20px 20px 0;
@@ -27,6 +27,7 @@
   margin-top: 100px;
   font-size: 2rem;
   font-weight: bold;
+  color: #365914;
 }
 
 .adocao-card {
