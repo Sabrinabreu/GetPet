@@ -7,7 +7,8 @@
       "precoNovo": "R$ 180,00",
       "descricao": "Ração completa para cães adultos de porte médio e grande.",
       "categoria": "Cachorro",
-      "porte": "Grande"
+      "porte": "Grande",
+      "subcategoria": "racao"
     },
     {
       "titulo": "Coleira Ajustável",
@@ -17,7 +18,8 @@
       "precoNovo": "R$ 29,90",
       "descricao": "Coleira com ajuste fácil e fecho seguro para passeios tranquilos.",
       "categoria": "Cachorro",
-      "porte": "Médio"
+      "porte": "Médio",
+      "subcategoria": "coleiras"
     },
     {
       "titulo": "Camiseta basica Pet",
@@ -27,7 +29,8 @@
       "precoNovo": "R$ 35,00",
       "descricao": "Camiseta para cachorro com tecido confortável.",
       "categoria": "Cachorro",
-      "porte": "Pequeno"
+      "porte": "Pequeno",
+      "subcategoria": "roupas"
     },
     {
       "titulo": "Ração para Gatos 5kg",
@@ -37,7 +40,8 @@
       "precoNovo": "R$ 110,00",
       "descricao": "Ração sabor frango com nutrientes essenciais para gatos adultos.",
       "categoria": "Gato",
-      "porte": "Médio"
+      "porte": "Médio",
+      "subcategoria": "racao"
     },
     {
       "titulo": "Areia Higiênica 2kg",
@@ -47,7 +51,8 @@
       "precoNovo": "R$ 27,00",
       "descricao": "Areia higiênica com grãos finos e controle de odores.",
       "categoria": "Gato",
-      "porte": "Todos"
+      "porte": "Todos",
+      "subcategoria": "higiene"
     },
     {
       "titulo": "Aquário 20L com tampa",
@@ -57,7 +62,8 @@
       "precoNovo": "R$ 170,00",
       "descricao": "Aquário resistente com acabamento premium e tampa com LED.",
       "categoria": "Peixe",
-      "porte": "Pequeno"
+      "porte": "Pequeno",
+      "subcategoria": "aquarios"
     },
     {
       "titulo": "Ração para Peixes Onivoros",
@@ -67,7 +73,8 @@
       "precoNovo": "R$ 19,90",
       "descricao": "Ração flocada ideal para peixes Onivoros de água doce.",
       "categoria": "Peixe",
-      "porte": "Todos"
+      "porte": "Todos",
+      "subcategoria": "racao"
     },
     {
       "titulo": "Comedouro Duplo",
@@ -77,7 +84,8 @@
       "precoNovo": "R$ 28,00",
       "descricao": "Comedouro duplo em inox, resistente e fácil de limpar.",
       "categoria": "Gato",
-      "porte": "Pequeno"
+      "porte": "Pequeno",
+      "subcategoria": "alimentacao"
     },
     {
       "titulo": "Ração para Hamsters 1kg",
@@ -87,7 +95,8 @@
       "precoNovo": "R$ 15,00",
       "descricao": "Mistura nutritiva com grãos, sementes e frutas desidratadas.",
       "categoria": "Roedor",
-      "porte": "Pequeno"
+      "porte": "Pequeno",
+      "subcategoria": "racao"
     },
     {
       "titulo": "Ração para Canários",
@@ -97,7 +106,8 @@
       "precoNovo": "R$ 14,00",
       "descricao": "Ração balanceada para canários com grãos selecionados.",
       "categoria": "Pássaro",
-      "porte": "Pequeno"
+      "porte": "Pequeno",
+      "subcategoria": "racao"
     }
   ]
   

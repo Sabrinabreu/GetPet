@@ -38,7 +38,9 @@
     position: relative;
     display: flex;
     align-items: center;
+    transition: background-color 0.5s ease-in-out;
 }
+
 
 /* ESSENCIAL! Ele esconde os banners que não estão ativos */
 .BannerFrame {
@@ -134,3 +136,43 @@
         .categ-dropdown p{
             margin-left: 30px;
         }
+
+/* Estilo para o contêiner dos links no dropdown */
+.dropdown-links {
+    display: flex;
+    align-items: row;
+    gap: 20px;
+    margin-top: 10px;
+}
+
+/* Estilo para o nome da categoria */
+.categoria-nome {
+    color: inherit; /* Herda a cor do dropdown */
+    font-size: 16px;
+}
+
+/* Estilo para o link principal ("Ver produtos de [animal]") */
+.main-link {
+    color: inherit; /* Herda a cor do dropdown */
+    text-decoration: none;
+    font-size: 16px;
+}
+
+/* Estilo para o contêiner das subcategorias */
+.subcat-container {
+    display: flex;
+    flex-direction: row;
+    gap: 5px;
+}
+
+/* Estilo para os links de subcategorias */
+.subcat-link {
+    color: inherit; /* Herda a cor do dropdown */
+    text-decoration: none;
+    font-size: 16px;
+    transition: opacity 0.2s;
+}
+
+.subcat-link:hover {
+    opacity: 0.8;
+}
