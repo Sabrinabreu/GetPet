@@ -45,12 +45,25 @@ button:hover {
 }
 
 .result {
-    font-size: 18px;
-    background: #dff0d8;
-    border: 1px solid #d0e9c6;
-    padding: 15px;
-    border-radius: 8px;
-    text-align: center;
-    display: flex;
-    flex-direction: row;
+  display: flex;
+  flex-direction: row; /* Garante que fique lado a lado */
+  align-items: flex-start;
+  gap: 20px;
+  padding: 15px;
+  border-radius: 8px;
+  background: #dff0d8;
+  border: 1px solid #d0e9c6;
+  text-align: left;
+}
+
+#animal-img {
+  width: 200px; /* ou o tamanho desejado */
+  height: auto;
+  border-radius: 20px;
+  flex-shrink: 0; /* Garante que a imagem não encolha */
+}
+
+#result-text {
+  flex: 1; /* Ocupa o espaço restante ao lado da imagem */
+  max-width: 100%;
 }
