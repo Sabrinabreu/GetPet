@@ -4,20 +4,22 @@
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <link rel="stylesheet" href="CSS/navbar.css" />
+  <link rel="stylesheet" href="CSS/quiz.css">
   <title>Quiz</title>
 </head>
 <body>
   <div id="navbar"></div>
-
-  <h1>Descubra qual o animal perfeito para você!</h1>
-  
-  <div id="quiz-container">
-        <h2>Quiz de Adoção de Animais</h2>
-        <div id="question-container"></div>
-        <div id="result-container" style="display: none;"></div>
-    </div>
+    <h1>🐾 Descubra qual o animal perfeito para você!</h1>
+    <div id="quiz" class="question"></div>
+    <div id="result" class="result" style="display:none;">
+    <img id="animal-img" src="" alt="Animal recomendado" style="max-width: 100%; border-radius: 12px; margin-bottom: 15px;">
+    <div id="result-text"></div>
+   </div>
 
   <script type="module" src="./JS/quiz.js"></script>
   <script src="./JS/navbar.js"></script>
 </body>
 </html>
+
+
+

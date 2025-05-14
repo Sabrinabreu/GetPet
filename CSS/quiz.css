@@ -1,0 +1,56 @@
+@import url('https://fonts.googleapis.com/css2?family=Rammetto+One&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Mukta+Vaani:wght@200;300;400;500;600;700;800&family=Rammetto+One&display=swap');
+
+body {
+    font-family: Arial, sans-serif;
+    background: #f7f7f7;
+    max-width: 800px;
+    margin: auto;
+    padding: 20px;
+}
+
+h1 { 
+    text-align: center;
+}
+.question {
+    background: #F2EFBD;
+    padding: 15px;
+    height: 25%;
+    margin-bottom: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 5px rgba(0,0,0,0.1);
+}
+
+.question p {
+    font-weight: bold;
+}
+
+button {
+    display: block;
+    width: 100%;
+    padding: 10px;
+    margin-top: 10px;
+    border: none;
+    border-radius: 5px;
+    background: #ffff;
+    color: #365914;
+    font-size: 16px;
+    cursor: pointer;
+    transition: 0.3s ease;
+}
+
+button:hover {
+    background: #365914;
+    color: #fff;
+}
+
+.result {
+    font-size: 18px;
+    background: #dff0d8;
+    border: 1px solid #d0e9c6;
+    padding: 15px;
+    border-radius: 8px;
+    text-align: center;
+    display: flex;
+    flex-direction: row;
+}

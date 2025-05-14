@@ -1,166 +1,147 @@
-// Perguntas do quiz
+const raças = {
+  "Boa Constritora": 0,
+  "Píton bola": 0,
+  "Coelho branco": 0,
+  "Coelho cinza": 0,
+  "Coelho misturado": 0,
+  "Porquinho-da-índia": 0,
+  "Calopsita": 0,
+  "Papagaio": 0,
+  "Rolinha": 0,
+  "Dálmata": 0,
+  "Bulldog": 0,
+  "Pitbull": 0,
+  "Caramelo": 0,
+  "São Bernardo": 0,
+  "Pincher": 0,
+  "Pug": 0,
+  "Gato laranja": 0,
+  "Gato frajola": 0,
+  "Gato branco": 0,
+  "Gato siamês": 0
+};
+
+const imagens = {
+  "Boa Constritora": "./Img/CobraMarrom.png",
+  "Píton bola": "./Img/CobraBranca.png",
+  "Coelho branco": "./Img/coelhoBranco.png",
+  "Coelho cinza": "./Img/coelhoCinza.png",
+  "Coelho misturado": "./Img/coelhoMesclado.png",
+  "Porquinho-da-índia": "./Img/hamster.png",
+  "Calopsita": "./Img/calopsita.png",
+  "Papagaio": "./Img/Papagaio.png",
+  "Rolinha": "./Img/rolinhaPassaro.png",
+  "Dálmata": "./Img/dalmata.png",
+  "Bulldog": "./Img/bulldog.png",
+  "Pitbull": "./Img/pitbull.png",
+  "Caramelo": "./Img/caramelo.png",
+  "São Bernardo": "./Img/saoBernardo.png",
+  "Pincher": "./Img/pincher.png",
+  "Pug": "./Img/pug.png",
+  "Gato laranja": "./Img/gatoLaranja.png",
+  "Gato frajola": "./Img/Frajola.png",
+  "Gato branco": "./Img/gatoBranco.png",
+  "Gato siamês": "./Img/gatoSiames.png"
+};
+
+const descrições = {
+  "Boa Constritora": "Uma cobra grande, ideal para quem tem espaço e curiosidade por animais exóticos.",
+  "Píton bola": "Uma cobra de médio porte, tranquila, ótima para iniciantes em répteis.",
+  "Coelho branco": "Afetuoso, silencioso e ótimo para crianças.",
+  "Coelho cinza": "Mais ativo e brincalhão, gosta de interação.",
+  "Coelho misturado": "Equilibrado, bom para quem tem espaço médio.",
+  "Porquinho-da-índia": "Animal pequeno, silencioso e de fácil manutenção.",
+  "Calopsita": "Ave alegre e sociável, gosta de interagir.",
+  "Papagaio": "Muito inteligente, brincalhão e vocal.",
+  "Rolinha": "Ave tranquila, ótima para ambientes silenciosos.",
+  "Dálmata": "Ativo, precisa de espaço e brincadeiras.",
+  "Bulldog": "Tranquilo, afetuoso e ótimo para ambientes médios.",
+  "Pitbull": "Forte e protetor, ideal para quem tem tempo e energia.",
+  "Caramelo": "O clássico vira-lata amigo de todos, adaptável.",
+  "São Bernardo": "Grande, carinhoso e precisa de espaço.",
+  "Pincher": "Pequeno, valente e cheio de energia.",
+  "Pug": "Ideal para apartamentos e crianças, calmo e adorável.",
+  "Gato laranja": "Brincalhão e curioso.",
+  "Gato frajola": "Equilibrado, afetuoso e independente.",
+  "Gato branco": "Tranquilo e observador.",
+  "Gato siamês": "Muito carinhoso e apegado ao tutor."
+};
+
 const perguntas = [
-    {
-      texto: "Qual o tamanho da sua casa?",
-      opcoes: ["Apartamento", "Casa com quintal pequeno", "Casa com quintal grande", "Chácara ou fazenda"],
-      pontuacao: {
-        "Apartamento": ["gato", "passaro", "roedor", "lagomorfo"],
-        "Casa com quintal pequeno": ["gato", "lagomorfo", "cachorro", "passaro"],
-        "Casa com quintal grande": ["cachorro", "lagomorfo", "reptil"],
-        "Chácara ou fazenda": ["cachorro", "lagomorfo", "reptil", "passaro"]
-      }
-    },
-    {
-      texto: "Você gostaria de um animal:",
-      opcoes: ["Normal (doméstico)", "Exótico"],
-      pontuacao: {
-        "Normal (doméstico)": ["cachorro", "gato", "lagomorfo"],
-        "Exótico": ["reptil", "passaro", "roedor"]
-      }
-    },
-    {
-      texto: "Você tem crianças em casa?",
-      opcoes: ["Sim, e elas são pequenas", "Sim, são adolescentes", "Não, mas tenho jovens adultos", "Não, não tenho crianças"],
-      pontuacao: {
-        "Sim, e elas são pequenas": ["cachorro", "lagomorfo"],
-        "Sim, são adolescentes": ["gato", "cachorro"],
-        "Não, mas tenho jovens adultos": ["gato", "passaro", "reptil"],
-        "Não, não tenho crianças": ["reptil", "roedor"]
-      }
-    },
-    {
-      texto: "Qual o seu nível de experiência com animais de estimação?",
-      opcoes: ["Nenhuma experiência", "Tenho experiência com animais pequenos (coelhos, hamsters)", "Tenho experiência com cães e gatos", "Tenho experiência com animais exóticos (répteis, aves)"],
-      pontuacao: {
-        "Nenhuma experiência": ["lagomorfo", "roedor"],
-        "Tenho experiência com animais pequenos (coelhos, hamsters)": ["lagomorfo", "roedor"],
-        "Tenho experiência com cães e gatos": ["cachorro", "gato"],
-        "Tenho experiência com animais exóticos (répteis, aves)": ["reptil", "passaro"]
-      }
-    },
-    {
-      texto: "Qual tipo de personalidade você busca em um animal?",
-      opcoes: ["Calmo e tranquilo", "Brincalhão e ativo", "Protetor e leal", "Curioso e explorador"],
-      pontuacao: {
-        "Calmo e tranquilo": ["gato", "lagomorfo", "reptil"],
-        "Brincalhão e ativo": ["cachorro", "lagomorfo", "passaro"],
-        "Protetor e leal": ["cachorro"],
-        "Curioso e explorador": ["reptil", "roedor", "passaro"]
-      }
-    },
-    {
-      texto: "Como é a sua rotina de alimentação?",
-      opcoes: ["Horários fixos", "Horários flexíveis"],
-      pontuacao: {
-        "Horários fixos": ["cachorro", "lagomorfo", "passaro"],
-        "Horários flexíveis": ["gato", "reptil", "roedor"]
-      }
-    },
-    {
-      texto: "Você tem algum problema de alergia?",
-      opcoes: ["Não", "Sim, sou alérgico a pelos de animais", "Sim, tenho alergia a penas"],
-      pontuacao: {
-        "Não": ["reptil", "roedor", "passaro", "gato", "cachorro", "lagomorfo"],
-        "Sim, sou alérgico a pelos de animais": ["reptil", "passaro"],
-        "Sim, tenho alergia a penas": ["gato", "cachorro", "lagomorfo", "roedor"]
-      }
-    },
-    {
-      texto: "Você tem outros animais em casa?",
-      opcoes: ["Sim, cães", "Sim, gatos", "Sim, outros animais", "Não"],
-      pontuacao: {
-        "Sim, cães": ["gato", "reptil"],
-        "Sim, gatos": ["cachorro", "reptil", "passaro"],
-        "Sim, outros animais": ["roedor", "reptil"],
-        "Não": ["reptil", "roedor", "passaro", "gato", "cachorro", "lagomorfo"]
-      }
-    },
-    {
-      texto: "Você gostaria de um animal que se dê bem com outros pets?",
-      opcoes: ["Sim, importante que se dê bem com outros animais", "Não, prefiro que ele seja o único animal"],
-      pontuacao: {
-        "Sim, importante que se dê bem com outros animais": ["cachorro", "lagomorfo", "passaro"],
-        "Não, prefiro que ele seja o único animal": ["gato", "reptil", "roedor"]
-      }
-    },
-    {
-      texto: "Qual o clima da sua cidade?",
-      opcoes: ["Quente", "Frio", "Temperado"],
-      pontuacao: {
-        "Quente": ["reptil", "passaro", "roedor"],
-        "Frio": ["gato", "lagomorfo", "cachorro"],
-        "Temperado": ["reptil", "roedor", "passaro", "gato", "cachorro", "lagomorfo"]
-      }
-    },
-    {
-      texto: "Qual a sua preferência de tamanho do animal?",
-      opcoes: ["Pequeno", "Médio", "Grande"],
-      pontuacao: {
-        "Pequeno": ["roedor", "lagomorfo", "gato", "passaro"],
-        "Médio": ["cachorro"],
-        "Grande": ["cachorro", "reptil"]
-      }
-    },
-    {
-      texto: "Qual o nível de envolvimento você espera ter com o seu animal?",
-      opcoes: ["Preciso de um animal que não precise de muito envolvimento diário", "Quero um animal que me acompanhe em várias atividades", "Prefiro que o animal seja mais independente e não precise de tanta atenção"],
-      pontuacao: {
-        "Preciso de um animal que não precise de muito envolvimento diário": ["reptil", "roedor", "gato"],
-        "Quero um animal que me acompanhe em várias atividades": ["cachorro", "lagomorfo"],
-        "Prefiro que o animal seja mais independente e não precise de tanta atenção": ["gato", "reptil"]
-      }
-    }
-  ];
-  
-  const resultados = {
-    cachorro: { nome: "Cachorro", descricao: "Amigável, leal e carinhoso." },
-    gato: { nome: "Gato", descricao: "Independente, tranquilo e elegante." },
-    passaro: { nome: "Pássaro", descricao: "Vibrante, livre e social." },
-    roedor: { nome: "Roedor", descricao: "Pequeno, ágil e cheio de energia." },
-    lagomorfo: { nome: "Coelho", descricao: "Fofo, dócil e sociável." },
-    reptil: { nome: "Réptil", descricao: "Silencioso, exótico e de baixa manutenção." }
-  };
+  {
+    texto: "Qual o tamanho do espaço disponível?",
+    opcoes: [
+      { texto: "Pequeno (ex: apartamento pequeno)", pontos: ["Pincher", "Pug", "Coelho branco", "Porquinho-da-índia", "Calopsita", "Gato branco", "Gato siamês", "Píton bola"] },
+      { texto: "Médio (ex: apartamento com varanda ou casa pequena)", pontos: ["Bulldog", "Gato frajola", "Gato laranja", "Papagaio", "Coelho misturado", "Píton bola", "Caramelo"] },
+      { texto: "Grande (quintal ou sítio)", pontos: ["São Bernardo", "Pitbull", "Dálmata", "Boa Constritora", "Papagaio", "Rolinha", "Gato laranja", "Caramelo"] }
+    ]
+  },
+  {
+    texto: "Quanto tempo você tem para dedicar diariamente ao animal?",
+    opcoes: [
+      { texto: "Muito tempo", pontos: ["Pitbull", "Caramelo", "Papagaio", "Dálmata", "Gato laranja", "Coelho cinza"] },
+      { texto: "Algum tempo", pontos: ["Bulldog", "Pug", "Gato siamês", "Calopsita", "Coelho branco", "Pincher"] },
+      { texto: "Pouco tempo", pontos: ["Porquinho-da-índia", "Boa Constritora", "Píton bola", "Rolinha", "Gato branco"] }
+    ]
+  },
+  {
+    texto: "Você tem alergia a pelos ou penas?",
+    opcoes: [
+      { texto: "Sim", pontos: ["Boa Constritora", "Píton bola", "Porquinho-da-índia"] },
+      { texto: "Não", pontos: ["Pug", "Pincher", "Gato siamês", "Caramelo", "Papagaio", "Coelho branco", "Gato laranja"] }
+    ]
+  },
+  {
+    texto: "Você busca um animal que seja:",
+    opcoes: [
+      { texto: "Carinhoso e próximo", pontos: ["Pug", "Caramelo", "Papagaio", "Gato siamês", "Coelho branco"] },
+      { texto: "Independente", pontos: ["Gato branco", "Boa Constritora", "Píton bola", "Rolinha"] },
+      { texto: "Exótico e silencioso", pontos: ["Boa Constritora", "Píton bola", "Porquinho-da-índia", "Calopsita"] },
+      { texto: "Alegre e brincalhão", pontos: ["Pitbull", "Dálmata", "Pincher", "Gato laranja"] }
+    ]
+  },
+  {
+    texto: "Você convive com crianças ou idosos?",
+    opcoes: [
+      { texto: "Sim", pontos: ["Pug", "Caramelo", "Gato branco", "Coelho branco", "Calopsita"] },
+      { texto: "Não", pontos: ["Pitbull", "Boa Constritora", "Papagaio", "Píton bola"] }
+    ]
+  }
+];
 
-  let perguntaAtual = 0;
-  let pontuacoes = { cachorro: 0, gato: 0, passaro: 0, roedor: 0, lagomorfo: 0, reptil: 0 };
+let indicePergunta = 0;
+const quizEl = document.getElementById("quiz");
+const resultEl = document.getElementById("result");
+const imgEl = document.getElementById("animal-img");
+const textEl = document.getElementById("result-text");
 
-  
-  // Função para mostrar a próxima pergunta
-  function mostrarPergunta() {
-    const pergunta = perguntas[perguntaAtual];
-    const container = document.getElementById("question-container");
-  
-    container.innerHTML = `
-      <h3>${pergunta.texto}</h3>
-      ${pergunta.opcoes.map(opcao => `
-        <button onclick="responder('${opcao}')">${opcao}</button>
-      `).join('')}
-    `;
-  }
-  
-  function responder(resposta) {
-    const pergunta = perguntas[perguntaAtual];  
-    perguntaAtual++;
-  
-    if (perguntaAtual < perguntas.length) {
-      mostrarPergunta();
-    } else {
-      mostrarResultado();
-    }
-  }
-  
-  
-  // resultado
-  function mostrarResultado() {
-    const resultadoContainer = document.getElementById("result-container");
-    const tipoVencedor = Object.keys(pontuacoes).reduce((a, b) => pontuacoes[a] > pontuacoes[b] ? a : b);
-    
-    resultadoContainer.innerHTML = `
-      <h2>Seu pet ideal é: ${resultados[tipoVencedor].nome}</h2>
-      <p>${resultados[tipoVencedor].descricao}</p>
-    `;
-    resultadoContainer.style.display = "block";
-    document.getElementById("question-container").style.display = "none";
-  }
-  
-  mostrarPergunta();  
+function mostrarPergunta() {
+  const atual = perguntas[indicePergunta];
+  quizEl.innerHTML = `<p>${atual.texto}</p>`;
+  atual.opcoes.forEach(opcao => {
+    const btn = document.createElement("button");
+    btn.textContent = opcao.texto;
+    btn.onclick = () => {
+      opcao.pontos.forEach(r => raças[r]++);
+      indicePergunta++;
+      if (indicePergunta < perguntas.length) {
+        mostrarPergunta();
+      } else {
+        mostrarResultado();
+      }
+    };
+    quizEl.appendChild(btn);
+  });
+}
+
+function mostrarResultado() {
+  quizEl.style.display = "none";
+  resultEl.style.display = "block";
+
+  const vencedor = Object.entries(raças).sort((a, b) => b[1] - a[1])[0][0];
+
+  imgEl.src = imagens[vencedor];
+  textEl.innerHTML = `<h2>${vencedor}</h2><p>${descrições[vencedor]}</p>`;
+}
+
+mostrarPergunta();
