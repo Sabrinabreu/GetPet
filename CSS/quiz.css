@@ -12,6 +12,7 @@ body {
 h1 { 
     text-align: center;
 }
+
 .question {
     background: #F2EFBD;
     padding: 15px;
@@ -44,26 +45,82 @@ button:hover {
     color: #fff;
 }
 
+button.selected {
+    background: #365914;
+    color: #fff;
+}
+
+.opcoes-container {
+    margin-bottom: 20px;
+}
+
+.nav-container {
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.nav-btn {
+    width: 48%;
+    background: #e0e0e0;
+    color: #333;
+}
+
+.nav-btn:hover {
+    background: #365914;
+    color: #fff;
+}
+
+.nav-btn:disabled {
+    background: #f0f0f0;
+    color: #999;
+    cursor: not-allowed;
+}
+
 .result {
-  display: flex;
-  flex-direction: row; /* Garante que fique lado a lado */
-  align-items: flex-start;
-  gap: 20px;
-  padding: 15px;
-  border-radius: 8px;
-  background: #dff0d8;
-  border: 1px solid #d0e9c6;
-  text-align: left;
+    display: flex;
+    flex-direction: row !important; 
+    align-items: flex-start;
+    gap: 20px;
+    padding: 15px;
+    border-radius: 8px;
+    background: #F2EFBD;
+    text-align: left;
 }
 
 #animal-img {
-  width: 200px; /* ou o tamanho desejado */
-  height: auto;
-  border-radius: 20px;
-  flex-shrink: 0; /* Garante que a imagem não encolha */
+    width: 200px;
+    height: auto;
+    border-radius: 20px;
+    flex-shrink: 0;
 }
 
 #result-text {
-  flex: 1; /* Ocupa o espaço restante ao lado da imagem */
-  max-width: 100%;
+    flex: 1;
+    max-width: 100%;
+}
+
+.result-btn-container {
+  display: flex;
+  justify-content: space-between;
+  gap: 20px;
+  margin-top: 20px;
+  flex-wrap: wrap;
+}
+
+
+.result-btn {
+  background-color: #F26B5E;
+  color: white;
+  border: none;
+  padding: 12px 20px;
+  font-size: 16px;
+  cursor: pointer;
+  border-radius: 8px;
+  transition: background-color 0.3s ease;
+  align-self: center; 
+}
+
+.result-btn:hover {
+  background-color: #f35446;
 }

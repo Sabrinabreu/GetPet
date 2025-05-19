@@ -110,38 +110,174 @@ const perguntas = [
 ];
 
 let indicePergunta = 0;
+let respostas = new Array(perguntas.length).fill(null); // Armazena respostas
 const quizEl = document.getElementById("quiz");
 const resultEl = document.getElementById("result");
 const imgEl = document.getElementById("animal-img");
 const textEl = document.getElementById("result-text");
+let opcaoSelecionada = null; // Armazena a opção selecionada na pergunta atual
+
+function resetarPontos() {
+  Object.keys(raças).forEach(r => raças[r] = 0);
+}
 
 function mostrarPergunta() {
   const atual = perguntas[indicePergunta];
   quizEl.innerHTML = `<p>${atual.texto}</p>`;
-  atual.opcoes.forEach(opcao => {
+  
+  // Container para opções
+  const opcoesContainer = document.createElement("div");
+  opcoesContainer.className = "opcoes-container";
+  
+  // Adiciona opções
+  atual.opcoes.forEach((opcao, index) => {
     const btn = document.createElement("button");
     btn.textContent = opcao.texto;
+    btn.className = respostas[indicePergunta] === index ? "selected" : "";
     btn.onclick = () => {
-      opcao.pontos.forEach(r => raças[r]++);
+      opcaoSelecionada = index;
+      // Remove a classe 'selected' de outros botões
+      opcoesContainer.querySelectorAll("button").forEach(b => b.className = "");
+      btn.className = "selected";
+      atualizarBotoesNavegacao();
+    };
+    opcoesContainer.appendChild(btn);
+  });
+  quizEl.appendChild(opcoesContainer);
+  
+  // Container para botões de navegação
+  const navContainer = document.createElement("div");
+  navContainer.className = "nav-container";
+  
+  // Botão Voltar
+  const btnVoltar = document.createElement("button");
+  btnVoltar.textContent = "Voltar";
+  btnVoltar.className = "nav-btn";
+  btnVoltar.disabled = indicePergunta === 0;
+  btnVoltar.onclick = () => {
+    if (indicePergunta > 0) {
+      // Salva a resposta atual, se houver
+      if (opcaoSelecionada !== null) {
+        respostas[indicePergunta] = opcaoSelecionada;
+      }
+      indicePergunta--;
+      opcaoSelecionada = respostas[indicePergunta];
+      mostrarPergunta();
+    }
+  };
+  navContainer.appendChild(btnVoltar);
+  
+  // Botão Próxima
+  const btnProxima = document.createElement("button");
+  btnProxima.textContent = indicePergunta === perguntas.length - 1 ? "Finalizar" : "Próxima";
+  btnProxima.className = "nav-btn";
+  btnProxima.disabled = opcaoSelecionada === null && respostas[indicePergunta] === null;
+  btnProxima.onclick = () => {
+    if (opcaoSelecionada !== null) {
+      respostas[indicePergunta] = opcaoSelecionada;
+      // Aplica pontos da resposta atual
+      resetarPontos();
+      respostas.forEach((resposta, i) => {
+        if (resposta !== null) {
+          perguntas[i].opcoes[resposta].pontos.forEach(r => raças[r]++);
+        }
+      });
       indicePergunta++;
       if (indicePergunta < perguntas.length) {
+        opcaoSelecionada = respostas[indicePergunta];
         mostrarPergunta();
       } else {
         mostrarResultado();
       }
-    };
-    quizEl.appendChild(btn);
-  });
+    }
+  };
+  navContainer.appendChild(btnProxima);
+  
+  quizEl.appendChild(navContainer);
+}
+
+function atualizarBotoesNavegacao() {
+  const btnProxima = quizEl.querySelector(".nav-btn:last-child");
+  btnProxima.disabled = opcaoSelecionada === null && respostas[indicePergunta] === null;
 }
 
 function mostrarResultado() {
   quizEl.style.display = "none";
-  resultEl.style.display = "block";
+  resultEl.style.display = "flex";
 
-  const vencedor = Object.entries(raças).sort((a, b) => b[1] - a[1])[0][0];
+  // Ajusta display para block para evitar layout em linha
+resultEl.style.display = "block";
 
-  imgEl.src = imagens[vencedor];
-  textEl.innerHTML = `<h2>${vencedor}</h2><p>${descrições[vencedor]}</p>`;
+// Limpa conteúdo anterior
+resultEl.innerHTML = '';
+
+const vencedor = Object.entries(raças).sort((a, b) => b[1] - a[1])[0][0];
+
+// Cria container para imagem + texto lado a lado
+const resultadoTopo = document.createElement("div");
+resultadoTopo.style.display = "flex";
+resultadoTopo.style.alignItems = "center";
+resultadoTopo.style.gap = "20px";  // Espaço entre imagem e texto
+
+// Cria e adiciona imagem
+const img = document.createElement("img");
+img.id = "animal-img";
+img.src = imagens[vencedor];
+img.alt = "Animal recomendado";
+img.style.maxWidth = "200px";  // Ajuste se quiser limitar tamanho
+img.style.height = "auto";
+resultadoTopo.appendChild(img);
+
+// Cria e adiciona texto
+const textDiv = document.createElement("div");
+textDiv.id = "result-text";
+textDiv.innerHTML = `<h2>${vencedor}</h2><p>${descrições[vencedor]}</p>`;
+resultadoTopo.appendChild(textDiv);
+
+// Adiciona o container topo ao resultEl
+resultEl.appendChild(resultadoTopo);
+
+// Cria container para botões (ficará abaixo do resultadoTopo)
+const btnContainer = document.createElement("div");
+btnContainer.className = "result-btn-container";
+Object.assign(btnContainer.style, {
+  marginTop: "20px",
+  display: "flex",
+  flexDirection: "row", 
+  gap: "10px",
+  justifyContent: "center",
+  flexWrap: "wrap" 
+});
+
+
+
+// Botão Refazer
+const btnRefazer = document.createElement("button");
+btnRefazer.textContent = "Refazer o Quiz";
+btnRefazer.className = "result-btn";
+btnRefazer.onclick = () => {
+  indicePergunta = 0;
+  respostas = new Array(perguntas.length).fill(null);
+  resetarPontos();
+  quizEl.style.display = "block";
+  resultEl.style.display = "none";
+  opcaoSelecionada = null;
+  mostrarPergunta();
+};
+btnContainer.appendChild(btnRefazer);
+
+// Botão Voltar para Home
+const btnHome = document.createElement("button");
+btnHome.textContent = "Voltar para a Home";
+btnHome.className = "result-btn";
+btnHome.onclick = () => {
+  window.location.href = "index.html";
+};
+btnContainer.appendChild(btnHome);
+
+// Adiciona container de botões abaixo do resultado topo
+resultEl.appendChild(btnContainer);
+
 }
 
 mostrarPergunta();
