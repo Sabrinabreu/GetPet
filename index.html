@@ -1,5 +1,6 @@
 <!DOCTYPE html>
 <html lang="pt-br">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -8,6 +9,7 @@
 
     <title>HomePage</title>
 </head>
+
 <body>
     <div id="navbar"></div>
 
@@ -28,50 +30,81 @@
                 <div class="BannerConteudo">
                     <div class="TextoBanner">
                         <h2>Adote hoje!</h2>
-                        <p>Sabia que cerca de 30% dos animais de rua são abandonados por famílias que não podem mais cuidar deles? Adotar um animal é dar uma nova chance de vida!</p>
+                        <p>Sabia que cerca de 30% dos animais de rua são abandonados por famílias que não podem mais
+                            cuidar deles? Adotar um animal é dar uma nova chance de vida!</p>
                     </div>
                     <img class="BannerDog" src="./Img/DogPeek.png">
                 </div>
-        
+
                 <div class="BannerConteudo">
                     <img class="BannerCat" src="./Img/catpeek.png">
                     <div class="TextoBanner">
                         <h2>Ajude a transformar vidas!</h2>
-                        <p>Não pode adotar? Você ainda pode fazer a diferença sendo voluntário ou ajudando com doações. Juntos, salvamos mais vidas!</p>
+                        <p>Não pode adotar? Você ainda pode fazer a diferença sendo voluntário ou ajudando com doações.
+                            Juntos, salvamos mais vidas!</p>
                     </div>
                 </div>
-        
+
                 <div class="BannerConteudo">
                     <img class="BannerDog2" src="./Img/peekingdog2.png">
                     <div class="TextoBanner">
                         <h2>Abandono é crime!</h2>
-                        <p>Milhares de animais são deixados nas ruas todos os dias. Denuncie maus-tratos e ajude a combater o abandono. Eles dependem de nós!</p>
+                        <p>Milhares de animais são deixados nas ruas todos os dias. Denuncie maus-tratos e ajude a
+                            combater o abandono. Eles dependem de nós!</p>
                     </div>
                 </div>
 
             </div>
         </div>
     </div>
-    
 
-     <!-- categorias -->
-      <h1 class="Titulo">Categorias</h1>
-        <div class="categoriashome">
-              <div class="bolinha" style="background-color: #365914;" data-index="0"></div>
-              <div class="bolinha" style="background-color: #71AB3E;" data-index="1"></div>
-              <div class="bolinha" style="background-color: #D4D955;" data-index="2"></div>
-              <div class="bolinha" style="background-color: #F2EFBD;" data-index="3"></div>
-              <div class="bolinha" style="background-color: #F26B5E;" data-index="4"></div>
+
+    <!-- categorias -->
+    <h1 class="Titulo">Categorias</h1>
+    <div class="categoriashome">
+        <div class="bolinha" style="background-color: #365914;" data-index="0"></div>
+        <div class="bolinha" style="background-color: #71AB3E;" data-index="1"></div>
+        <div class="bolinha" style="background-color: #D4D955;" data-index="2"></div>
+        <div class="bolinha" style="background-color: #F2EFBD;" data-index="3"></div>
+        <div class="bolinha" style="background-color: #F26B5E;" data-index="4"></div>
+    </div>
+    <div class="categ-dropdown" id="dropdown">
+        <div id="dropdown-triangulo"></div>
+        <p id="dropdown-content">Texto da categoria</p>
+    </div>
+
+
+
+    <script src="./JS/navbar.js"></script>
+    <script src="./JS/categoriaDrop.js"></script>
+    <script type="module" src="./JS/bannerHome.js"></script>
+    <footer>
+        <div class="content">
+            <div class="principalContent">
+                <div class="links">
+                    <a href="">Sobre Nós</a>
+                    <a href="">Contato</a>
+                    <a href="">Termos de Uso</a>
+                    <a href="">Politica de Privacidade </a>
+                </div>
+                <div class="redes">
+                    <h3>Siga-nos nas redes sociais: </h3>
+                    <a href=""><img width="40px" src="Img/icons8-facebook-novo-50.png"></a>
+                    <a href=""><img width="40px" src="Img/icons8-instagram-50.png"></a>
+                    <a href=""><img width="40px" src="Img/icons8-whatsapp-50.png"> </a>
+                    <a href=""><img width="40px" src="Img/icons8-x-50.png"> </a>
+                </div>
+
+            </div>
+
+            <div class="subContent">
+                <p>Desenvolvido por Manoela Cruz Ramalho , Livia Figueiredo e Sabrina Britto de Abreu</p>
+                <h6>GetPet © 2025 | Todos os direitos reservados.</h6>
+            </div>
+            <div class="line"></div>
         </div>
-        <div class="categ-dropdown" id="dropdown">
-            <div id="dropdown-triangulo"></div>
-            <p id="dropdown-content">Texto da categoria</p>
-        </div>
 
-
-
-        <script src="./JS/navbar.js"></script>
-        <script src="./JS/categoriaDrop.js"></script>
-        <script type="module" src="./JS/bannerHome.js"></script>
+    </footer>
 </body>
+
 </html>

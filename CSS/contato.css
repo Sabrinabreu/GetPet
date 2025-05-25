@@ -179,3 +179,103 @@
         linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
     background-size: 55px 55px;
 }
+
+.principalContent {
+    background-color: #F2EFBD !important;
+    width: 100%;
+    height: 140px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 120%;
+
+}
+
+.links {
+    display: flex;
+    justify-content: center;
+}
+
+
+.links a {
+    text-decoration: none;
+    position: relative;
+    color: #365914;
+    margin: 18px 0 10px 28px;
+    font-size: 22px;
+    transition: color 0.6s ease;
+}
+
+.links a::after {
+    content: "";
+    position: absolute;
+    width: 0;
+    height: 2px;
+    left: 0;
+    bottom: -3px;
+    background-color: #F26B5E;
+    transition: width 0.6s ease;
+}
+
+.links a:hover::after {
+    width: 100%;
+}
+
+.redes {
+    display: flex;
+    justify-content: center;
+}
+
+.redes h3 {
+    text-decoration: none;
+    color: #365914;
+    margin-left: 10px;
+    margin-top: 6px;
+    font-size: 22px;
+}
+
+.redes a {
+    margin-left: 20px;
+    transition: all 1s;
+}
+
+.redes a:hover {
+    transform: scale(1.1);
+}
+
+.line {
+    background-color: white;
+    height: 10px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 140%;
+
+}
+
+.subContent {
+    background-color: #71AB3E !important;
+    width: 100%;
+    height: 100px;
+    position: absolute;
+    bottom: 0%;
+    left: 0%;
+    right: 0%;
+    top: 140%;
+}
+
+
+.subContent p {
+    margin-top: 30px;
+    text-align: center;
+    color: white;
+}
+
+.subContent h6 {
+    margin-top: -10px;
+    font-size: 14px;
+    text-align: center;
+    color: white;
+}
