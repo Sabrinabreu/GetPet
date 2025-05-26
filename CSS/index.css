@@ -186,17 +186,16 @@
     opacity: 0.8;
 }
 
-
-.principalContent {
-    background-color: #F2EFBD !important;
-    width: 100%;
-    height: 140px;
+footer {
     position: absolute;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    top: 120%;
-
+    top: 170%;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    bottom: 0;
+    width: 100%;
+    background-color: #F2EFBD !important;
+    height: 140px;
 }
 
 .links {
@@ -254,11 +253,11 @@
 .line {
     background-color: white;
     height: 10px;
-    position: absolute;
+    position: relative;
     bottom: 0%;
     left: 0%;
     right: 0%;
-    top: 140%;
+    top: 0%;
 
 }
 
@@ -270,7 +269,7 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
-    top: 140%;
+    top: 100%;
 }
 
 

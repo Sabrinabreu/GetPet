@@ -1,25 +1,30 @@
 .container-contato {
-      display: flex;
-      background-color: #F26B5E;
-      position: relative; 
-  }
+    display: flex;
+    background-color: #F26B5E;
+    position: relative;
+}
 
-  
-  .imagem-contato {
+
+.imagem-contato {
     flex: 1;
     height: 580px;
-  }
-      .imagem-contato img {
-        position: absolute; /* Retira a imagem do fluxo normal */
-        height: 90%; /* Mantém a altura proporcional */
-        max-width: 50%; /* Limita a largura para evitar que cubra todo o formulário */
-        object-fit: cover;
-        left: 33.4%;
-        z-index: 10; /* Garante que a imagem fique acima do formulário */
-  
-    }
-  
-  .formulario-contato {
+}
+
+.imagem-contato img {
+    position: absolute;
+    /* Retira a imagem do fluxo normal */
+    height: 90%;
+    /* Mantém a altura proporcional */
+    max-width: 50%;
+    /* Limita a largura para evitar que cubra todo o formulário */
+    object-fit: cover;
+    left: 33.4%;
+    z-index: 10;
+    /* Garante que a imagem fique acima do formulário */
+
+}
+
+.formulario-contato {
     flex: 1;
     z-index: 5;
     background-color: #F2EFBD;
@@ -27,26 +32,28 @@
     justify-items: center;
     max-height: 500px;
     border-bottom-left-radius: 20px;
-  }
-        .formulario-contato .Titulo {
-            margin-left: 0;
-            font-size: 2vw;
-            margin-bottom: 40px;
-            color: #365914;
-        }
-        .formulario-contato input,
-        .formulario-contato textarea {
-            margin-bottom: 15px;
-            padding: 12px;
-            font-size: 16px;
-            border: 0;
-            border-radius: 20px;
-            width: 100%;
-            max-width: 700px;
-        }
-  
+}
 
-  .btn-cont {
+.formulario-contato .Titulo {
+    margin-left: 0;
+    font-size: 2vw;
+    margin-bottom: 40px;
+    color: #365914;
+}
+
+.formulario-contato input,
+.formulario-contato textarea {
+    margin-bottom: 15px;
+    padding: 12px;
+    font-size: 16px;
+    border: 0;
+    border-radius: 20px;
+    width: 100%;
+    max-width: 700px;
+}
+
+
+.btn-cont {
     background: transparent;
     font-size: 17px;
     border: 1px solid #7cc33f;
@@ -57,14 +64,15 @@
     cursor: pointer;
     font-weight: bold;
     transition: background 0.3s;
-} 
-        .btn-cont:hover {
-            background: #7cc33f;
-            color: #fff;
-        }
+}
 
-  
-  .card-infos {
+.btn-cont:hover {
+    background: #7cc33f;
+    color: #fff;
+}
+
+
+.card-infos {
     display: flex;
     flex-wrap: wrap;
     background-color: white;
@@ -73,42 +81,46 @@
     height: 22vw;
     max-width: 1200px;
     border-radius: 16px;
-    box-shadow: 0 4px 12px rgba(0,0,0,0.1);
+    box-shadow: 0 4px 12px rgba(0, 0, 0, 0.1);
     overflow: hidden;
-  }
-  
-  .mapa {
+}
+
+.mapa {
     flex: 1;
     min-width: 300px;
-  }
-        .mapa iframe {
-            width: 100%;
-            height: 100%;
-            min-height: 300px;
-            border: none;
-        }
-  
-  .infos-escritorio {
+}
+
+.mapa iframe {
+    width: 100%;
+    height: 100%;
+    min-height: 300px;
+    border: none;
+}
+
+.infos-escritorio {
     flex: 1;
     padding: 30px;
     background-color: #D4D955;
-  }
-        .infos-escritorio .Titulo {
-            margin-left: 0;
-            color: #365914;
-        }
-        .infos-escritorio p strong {
-            font-size: 18px;
-            margin-top: 0;
-            color: #365914;
-        }
-        .infos-escritorio p {
-            margin: 10px 0;
-            font-size: 16px;
-        }
-        
+}
 
-  .valores-container {
+.infos-escritorio .Titulo {
+    margin-left: 0;
+    color: #365914;
+}
+
+.infos-escritorio p strong {
+    font-size: 18px;
+    margin-top: 0;
+    color: #365914;
+}
+
+.infos-escritorio p {
+    margin: 10px 0;
+    font-size: 16px;
+}
+
+
+.valores-container {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -127,19 +139,19 @@
     text-align: center;
 }
 
-        .valor-card:hover {
-            transform: translateY(-8px);
-        }
+.valor-card:hover {
+    transform: translateY(-8px);
+}
 
-        .valor-card h3 {
-            margin-bottom: 10px;
-            font-size: 1.3rem;
-        }
+.valor-card h3 {
+    margin-bottom: 10px;
+    font-size: 1.3rem;
+}
 
-        .valor-card p {
-            font-size: 1rem;
-            font-weight: normal;
-        }
+.valor-card p {
+    font-size: 1rem;
+    font-weight: normal;
+}
 
 
 .sobrenos-button {
@@ -154,11 +166,12 @@
     transition: all 0.3s ease;
     align-self: flex-start;
     text-decoration: none;
-  }
-      .sobrenos-button:hover {
-        background-color: #71AB3E;
-        color: white;
-      }
+}
+
+.sobrenos-button:hover {
+    background-color: #71AB3E;
+    color: white;
+}
 
 
 .card-doacao {
@@ -173,23 +186,24 @@
     text-align: start;
 
     /* quadriculado do card */
-    --color: #e2e2e2;    /* cor das linhas */
-    background-color: #f8f8f8;    /* cor do fundo */
-    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent),
-        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%,transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%,transparent);
+    --color: #e2e2e2;
+    /* cor das linhas */
+    background-color: #f8f8f8;
+    /* cor do fundo */
+    background-image: linear-gradient(0deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent),
+        linear-gradient(90deg, transparent 24%, var(--color) 25%, var(--color) 26%, transparent 27%, transparent 74%, var(--color) 75%, var(--color) 76%, transparent 77%, transparent);
     background-size: 55px 55px;
 }
 
-.principalContent {
-    background-color: #F2EFBD !important;
-    width: 100%;
-    height: 140px;
+footer {
     position: absolute;
-    bottom: 0%;
-    left: 0%;
-    right: 0%;
-    top: 120%;
-
+    top: 260%;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    width: 100%;
+    background-color: #F2EFBD !important;
+    height: 140px;
 }
 
 .links {
@@ -247,11 +261,11 @@
 .line {
     background-color: white;
     height: 10px;
-    position: absolute;
+    position: relative;
     bottom: 0%;
     left: 0%;
     right: 0%;
-    top: 140%;
+    top: 0%;
 
 }
 
@@ -263,7 +277,7 @@
     bottom: 0%;
     left: 0%;
     right: 0%;
-    top: 140%;
+    top: 100%;
 }
 
 
