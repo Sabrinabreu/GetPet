@@ -1,7 +1,7 @@
 const bolinhas = document.querySelectorAll('.bolinha');
+const iconeBolinha = document.querySelectorAll('.icone')
 const dropdown = document.getElementById('dropdown');
 const dropdownContent = document.getElementById('dropdown-content');
-
 const categorias = [
     {
         nome: "Cachorro",
@@ -97,7 +97,7 @@ bolinhas.forEach((bolinha, index) => {
             dropdown.style.backgroundColor = categoria.backgroundColor;
             dropdown.style.setProperty('--triangulo-color', categoria.backgroundColor);
             dropdown.style.color = categoria.textColor; // Aplica a cor do texto
-
+            setTimeout(() => { }, 0);
             // Adicionar subcategorias ao lado do link "Ver produtos"
             const subcategoriasHTML = categoria.subcategorias
                 .map(subcat => `
@@ -108,7 +108,6 @@ bolinhas.forEach((bolinha, index) => {
                 .join('');
 
             dropdownContent.innerHTML = `
-                <span class="categoria-nome">${categoria.nome}</span><br>
                 <div class="dropdown-links">
                     <a href="produtos.html?categoria=${encodeURIComponent(categoria.valor)}" class="main-link">Ver produtos de ${categoria.nome}</a>
                     <div class="subcat-container">${subcategoriasHTML}</div>
@@ -126,8 +125,14 @@ bolinhas.forEach((bolinha, index) => {
 
 // Esconder dropdown ao clicar fora
 document.addEventListener('click', (e) => {
-    if (!dropdown.contains(e.target) && !e.target.classList.contains('bolinha')) {
+    // Verifica se o clique NÃO foi dentro do dropdown E
+    // NÃO foi na bolinha E
+    // NÃO foi na imagem dentro da bolinha
+    if (!dropdown.contains(e.target) &&
+        !e.target.classList.contains('bolinha') &&
+        !e.target.closest('.bolinha')) { // Usa closest para verificar se o elemento clicado (ou um pai dele) é uma bolinha
         dropdown.style.display = 'none';
         bolinhas.forEach(b => b.classList.remove('active'));
     }
 });
+

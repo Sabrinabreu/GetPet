@@ -11,13 +11,14 @@ body {
 
 h1 {
     text-align: center;
+    margin-top: 80px;
 }
 
 .question {
     background: #F2EFBD;
     padding: 15px;
     height: 25%;
-    margin-bottom: 20px;
+    margin-top: 40px;
     border-radius: 8px;
     box-shadow: 0 0 5px rgba(0, 0, 0, 0.1);
 }
@@ -127,7 +128,7 @@ button.selected {
 
 footer {
     position: absolute;
-    top: 90%;
+    top: 74.8%;
     left: 0;
     right: 0;
     z-index: 1000;
