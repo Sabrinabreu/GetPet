@@ -179,6 +179,7 @@
      gap: 8px;
      /* Espaçamento entre os links */
      margin-top: 15px;
+     padding-right: 25px;
  }
 
  /* Estilo para o link principal "Ver produtos" */
@@ -188,7 +189,7 @@
      /* Fundo sutil para o link principal */
      color: inherit;
      /* Herda a cor do texto do dropdown */
-     padding: 8px 15px;
+     padding: 8px 10px;
      border-radius: 5px;
      text-decoration: none;
      font-weight: bold;
