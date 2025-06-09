@@ -12,6 +12,7 @@ function renderServicos(servicos) {
     const card = document.createElement("div");
     card.className = "adestramento-card";
 
+    // Adicionando o conteúdo do card
     card.innerHTML = `
       <img src="${servico.imagem}" class="adestramento-image">
       <div class="adestramento-info">
@@ -21,10 +22,60 @@ function renderServicos(servicos) {
       </div>
     `;
 
+    // Adicionando o card no container
     container.appendChild(card);
+
+    // Adicionando o evento de clique no botão "Contratar"
+    const button = card.querySelector(".adestramento-button");
+    button.addEventListener('click', (event) => {
+      event.stopPropagation(); // Impede que o clique no botão feche a sobreposição logo após abrir
+
+      // Se o card não tiver a sobreposição, adiciona
+      if (!card.querySelector('.check-overlay')) {
+        const overlay = document.createElement('div');
+        overlay.classList.add('check-overlay');
+        card.appendChild(overlay);
+      }
+    });
   });
 }
 
+// Evento de clique global para detectar clique fora dos cards
+document.addEventListener('click', (event) => {
+  // Verifica se o clique foi fora de um card com a sobreposição
+  const checkOverlay = document.querySelector('.check-overlay');
+  const cardClicked = event.target.closest('.adestramento-card');
+
+  // Se clicou fora de um card com a sobreposição, remova a sobreposição
+  if (checkOverlay && !cardClicked) {
+    checkOverlay.remove();
+  }
+});
+
+
+// Evento global para detectar clique fora dos cards
+document.addEventListener('click', (event) => {
+  // Verifica se o clique foi fora de um card
+  const card = event.target.closest('.adestramento-card');
+  const checkOverlay = document.querySelector('.check-overlay');
+
+  // Verifica se o clique não foi dentro de um card com a sobreposição
+  if (checkOverlay && !card) {
+    checkOverlay.remove();
+  }
+});
+
+
+// Evento global para detectar clique fora dos cards
+document.addEventListener('click', (event) => {
+  const checkOverlay = document.querySelector('.check-overlay');
+  const card = event.target.closest('.adestramento-card'); // Card clicado
+
+  // Se o clique não foi dentro de um card com a sobreposição, remova a sobreposição
+  if (checkOverlay && !card) {
+    checkOverlay.remove();
+  }
+});
 
 // Serviços de adestramento
 const servicosAdestramento = [

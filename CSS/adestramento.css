@@ -173,3 +173,31 @@
    text-align: center;
    color: white;
  }
+
+/* _______________________________________________ */
+/* Check */
+.adestramento-card {
+    position: relative; /* Essencial para a sobreposição funcionar */
+}
+
+.check-overlay {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(255, 255, 255, 0.9); /* Branco com transparência */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 2; /* Garante que a sobreposição fique acima do conteúdo do card */
+}
+
+/* Símbolo de check */
+.check-overlay::before {
+    content: "✔"; /* Símbolo de check */
+    font-size: 4rem;
+    color: #71AB3E;
+    font-weight: bold;
+}
+
