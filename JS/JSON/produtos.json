@@ -10,6 +10,17 @@
       "porte": "Grande",
       "subcategoria": "racao"
     },
+    { 
+      "titulo": "Sachê",
+      "subtitulo": "Whiskas",
+      "imagem": "./Img/PetiscoGato.jpg",
+      "precoAntigo": "R$ 5,78",
+      "precoNovo": "R$ 3,39",
+      "descricao": "Ração Úmida Para Gatos",
+      "categoria": "Gato",
+      "porte": "Todos",
+      "subcategoria": "petiscos"
+    },
     {
       "titulo": "Coleira Ajustável",
       "subtitulo": "PetSafe",
